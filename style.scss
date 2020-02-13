@@ -1,13 +1,26 @@
-@import "scss/fontawesome.scss";
-@import "scss/solid.scss";
-@import "scss/brands.scss";
-@import "scss/regular.scss";
+@import "scss_fa/fontawesome.scss";
+@import "scss_fa/solid.scss";
+@import "scss_fa/brands.scss";
+@import "scss_fa/regular.scss";
+@import "variables";
 
+
+/*-----Mobile First------*/
+/*Pour les media queries, il faut rajouter à la fin des déclarations mobile first "@include desktop{déclarations desktop}"*/
 body{
     margin:0;
     padding:0;
+    background-color: red;
+
+    @include desktop{
+        background-color: #fff;
+    }
 }
 
 .burger{
-    display: none;
+    display: block;
+
+    @include desktop{
+        display: none;
+    }
 }
