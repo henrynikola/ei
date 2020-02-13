@@ -3,6 +3,7 @@
 @import "scss_fa/brands.scss";
 @import "scss_fa/regular.scss";
 @import "variables";
+@import "fonts";
 
 
 /*-----Mobile First------*/
@@ -14,6 +15,15 @@ body{
 
     @include desktop{
         background-color: #fff;
+    }
+
+    nav{
+        h1{
+            span{
+                font-family: 'Montserrat';
+                /*Test de font-face*/
+            }
+        }
     }
 }
 

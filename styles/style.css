@@ -5938,6 +5938,11 @@ readers do not read off random characters that represent icons */
 }
 
 /*Media Query Desktop*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+
 /*-----Mobile First------*/
 /*Pour les media queries, il faut rajouter à la fin des déclarations mobile first "@include desktop{déclarations desktop}"*/
 body {
@@ -5950,6 +5955,11 @@ body {
   body {
     background-color: #fff;
   }
+}
+
+body nav h1 span {
+  font-family: 'Montserrat';
+  /*Test de font-face*/
 }
 
 .burger {

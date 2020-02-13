@@ -1,0 +1,155 @@
+
+/*============================================================ font face import */
+
+
+
+@font-face {
+  font-family: 'codeconf';
+  src: url('webfonts/codeconf.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'codeconf' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e900";
+}
+.icon-search2:before {
+  content: "\e901";
+}
+.icon-search3:before {
+  content: "\e902";
+}
+.icon-dribbble:before {
+  content: "\e903";
+}
+.icon-dribbble2:before {
+  content: "\e904";
+}
+.icon-cb:before {
+  content: "\e905";
+}
+.icon-paypal:before {
+  content: "\e906";
+}
+.icon-left:before {
+  content: "\e907";
+}
+.icon-right:before {
+  content: "\e908";
+}
+.icon-top:before {
+  content: "\e909";
+}
+.icon-bottom:before {
+  content: "\e90a";
+}
+.icon-slack:before {
+  content: "\e90b";
+}
+.icon-github:before {
+  content: "\e90c";
+}
+.icon-twitter:before {
+  content: "\e90d";
+}
+
+/* end import */
+
+
+
+/*============================================================ font face demo.html */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #555;
+  background: #fff;
+}
+h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.glyph_icon {
+  box-shadow:  inset 0 -1px 0  #e7e7e7;
+  padding-bottom: .25em;
+}
+
+.glyph_icon:hover [class^="icon"] {
+  color: inherit;
+  transform: scale(1.25) translateY(5px);
+}
+
+[class^="icon"] {
+  transform: translateY(5px);
+  color: #0ce;
+  position: absolute;
+  transition: all .6s;
+}
+
+.glyph {
+  font-size: 1.8rem;
+  padding-bottom: 1em;
+  margin-bottom: .75em;
+}
+
+.parent {
+  padding-top: 1.5rem;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+  justify-content: center;
+  grid-column-gap: 2rem;
+}
+
+.txt_icon {
+  margin-left: 2.75rem;
+}
+
+.txt_icon {
+  cursor: pointer;
+}
+
+.ct_value {
+  display: block;
+  font-size: .8rem;
+  transition: all .3s;
+}
+
+.ct_value::first-letter {
+  letter-spacing: 1px;
+  margin-left: -2px;
+  font-weight: bold;
+}
+
+.ct_value:after {
+  transition: all .3s;
+  content:"<< content value";
+  margin-left: .25rem;
+  color: #0000;
+  cursor: pointer;
+}
+
+.ct_value:hover, .txt_icon:hover ~ .ct_value {
+  color:#0ce;
+}
+
+.ct_value:hover:after, .txt_icon:hover ~ .ct_value:after  {
+  color:#0ce;
+}
+/* end demo */
