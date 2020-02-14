@@ -31,6 +31,16 @@
     font-weight: 300;
 }
 
+@font-face{
+    font-family: 'MontserratBlack';
+    src: url('../fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+@mixin MontserratBlack {
+    font-family: 'MontserratBlack';
+    font-weight: 900;    
+}
+
 
 /*Import MavenPro*/
 @font-face{

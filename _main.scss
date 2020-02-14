@@ -1,8 +1,86 @@
 main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     .content{
         width: 100%;
+        margin: 3em 0;
+
+        h2{
+            text-align: center;
+            @include MontserratBold;
+            color: $bleu;
+        }
+
+        .activites{
+            padding: 0;
+            list-style: none;
+            .act{
+                display: block;
+                margin-bottom: 1em;
+
+                figure{
+                    margin:0;
+                    margin-left:2em;
+                    background-color: $bleu2;
+
+                    img{
+                        display: none;
+                    }
+                    figcaption{
+                        background-color: $grisclair;
+                        padding-left: 2em;
+                        height: 100px;
+
+                        h4, h4+p{
+                            display:none;
+                        }
+
+                        .more{
+                            width: 30px;
+                            height: 3px;
+                            display: block;
+                            a{
+                                display:none;
+                            }
+                            .troispoints{
+                                width: 30px;
+                                height: 5px;
+
+                                span{
+                                    width: 3px;
+                                    height: 3px;
+                                    background-color: $grisfonce;
+                                    border-radius: 100%;
+                                }
+                            }
+                        }
+
+                        h3, p{
+                            margin:0;
+                        }
+                        h3{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            color: $grisfonce;
+                            @include MontserratBlack;
+
+                            span{
+                                @include Museo;
+                            }
+                        }
+
+                        .city{
+                            @include Montserrat;
+                            color: $bleu;
+                        }
+
+                        
+                    }
+                }
+            }
+        }
     }
 }

@@ -5958,6 +5958,12 @@ readers do not read off random characters that represent icons */
   font-weight: 300;
 }
 
+@font-face {
+  font-family: 'MontserratBlack';
+  src: url("../fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
 /*Import MavenPro*/
 @font-face {
   font-family: 'MavenPro';
@@ -6303,6 +6309,10 @@ body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -6313,6 +6323,80 @@ body main {
 
 body main .content {
   width: 100%;
+  margin: 3em 0;
+}
+
+body main .content h2 {
+  text-align: center;
+  font-family: 'MontserratBold';
+  font-weight: 700;
+  color: #00d8ff;
+}
+
+body main .content .activites {
+  padding: 0;
+  list-style: none;
+}
+
+body main .content .activites .act {
+  display: block;
+  margin-bottom: 1em;
+}
+
+body main .content .activites .act figure {
+  margin: 0;
+  margin-left: 2em;
+  background-color: #284e68;
+}
+
+body main .content .activites .act figure img {
+  display: none;
+}
+
+body main .content .activites .act figure figcaption {
+  background-color: #d6d6d6;
+  padding-left: 2em;
+  height: 100px;
+}
+
+body main .content .activites .act figure figcaption h4, body main .content .activites .act figure figcaption h4 + p {
+  display: none;
+}
+
+body main .content .activites .act figure figcaption .more a {
+  display: none;
+}
+
+body main .content .activites .act figure figcaption h3, body main .content .activites .act figure figcaption p {
+  margin: 0;
+}
+
+body main .content .activites .act figure figcaption h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #737b80;
+  font-family: 'MontserratBlack';
+  font-weight: 900;
+  margin-top: 2em;
+}
+
+body main .content .activites .act figure figcaption h3 span {
+  font-family: 'Museo';
+  font-weight: 500;
+}
+
+body main .content .activites .act figure figcaption .city {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  color: #00d8ff;
 }
 
 .hidden {
