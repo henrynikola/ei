@@ -29,9 +29,14 @@ main{
                         display: none;
                     }
                     figcaption{
-                        background-color: $grisclair;
+                        background-color: $gris;
                         padding-left: 2em;
                         height: 100px;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-self: flex-start;
 
                         h4, h4+p{
                             display:none;
@@ -39,20 +44,29 @@ main{
 
                         .more{
                             width: 30px;
-                            height: 3px;
+                            height: 10px;
                             display: block;
+                            position: absolute;
+                            top: calc(50%-3px);
+                            right: 2em;
+                            
                             a{
                                 display:none;
                             }
                             .troispoints{
-                                width: 30px;
-                                height: 5px;
+                                width: 25px;
+                                height: 10px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin: 0;
 
                                 span{
-                                    width: 3px;
-                                    height: 3px;
+                                    display: block;
+                                    width: 5px;
+                                    height: 5px;
                                     background-color: $grisfonce;
-                                    border-radius: 100%;
+                                    border-radius: 5px;
                                 }
                             }
                         }
@@ -66,15 +80,18 @@ main{
                             align-items: flex-start;
                             color: $grisfonce;
                             @include MontserratBlack;
+                            font-size: 1.5em;
 
                             span{
                                 @include Museo;
+                                font-size:.8em;
                             }
                         }
 
                         .city{
                             @include Montserrat;
                             color: $bleu;
+                            margin-top: .3em;
                         }
 
                         

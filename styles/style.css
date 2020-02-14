@@ -6354,17 +6354,62 @@ body main .content .activites .act figure img {
 }
 
 body main .content .activites .act figure figcaption {
-  background-color: #d6d6d6;
+  background-color: #f8f8f8;
   padding-left: 2em;
   height: 100px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 body main .content .activites .act figure figcaption h4, body main .content .activites .act figure figcaption h4 + p {
   display: none;
 }
 
+body main .content .activites .act figure figcaption .more {
+  width: 30px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  top: calc(50%-3px);
+  right: 2em;
+}
+
 body main .content .activites .act figure figcaption .more a {
   display: none;
+}
+
+body main .content .activites .act figure figcaption .more .troispoints {
+  width: 25px;
+  height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+body main .content .activites .act figure figcaption .more .troispoints span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: #737b80;
+  border-radius: 5px;
 }
 
 body main .content .activites .act figure figcaption h3, body main .content .activites .act figure figcaption p {
@@ -6385,18 +6430,20 @@ body main .content .activites .act figure figcaption h3 {
   color: #737b80;
   font-family: 'MontserratBlack';
   font-weight: 900;
-  margin-top: 2em;
+  font-size: 1.5em;
 }
 
 body main .content .activites .act figure figcaption h3 span {
   font-family: 'Museo';
   font-weight: 500;
+  font-size: .8em;
 }
 
 body main .content .activites .act figure figcaption .city {
   font-family: 'Montserrat';
   font-weight: 400;
   color: #00d8ff;
+  margin-top: .3em;
 }
 
 .hidden {
