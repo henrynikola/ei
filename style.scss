@@ -4,6 +4,7 @@
 @import "scss_fa/regular.scss";
 @import "variables";
 @import "fonts";
+@import "couleurs";
 
 
 /*-----Mobile First------*/
@@ -11,7 +12,7 @@
 body{
     margin:0;
     padding:0;
-    background-color: red;
+    background-color: red; /*test media query*/
 
     @include desktop{
         background-color: #fff;
@@ -21,7 +22,7 @@ body{
         h1{
             span{
                 font-family: 'Montserrat';
-                /*Test de font-face*/
+                /*Test de font-face, et ça a l'air d'aller*/
             }
         }
     }
@@ -33,4 +34,8 @@ body{
     @include desktop{
         display: none;
     }
+}
+
+.hidden{
+    display: none;
 }

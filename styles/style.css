@@ -5938,9 +5938,55 @@ readers do not read off random characters that represent icons */
 }
 
 /*Media Query Desktop*/
+/*Import Montserrat*/
 @font-face {
   font-family: 'Montserrat';
-  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'MontserratBold';
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'MontserratLight';
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+/*Import MavenPro*/
+@font-face {
+  font-family: 'MavenPro';
+  src: url("../fonts/maven-pro/MavenPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'MavenProBold';
+  src: url("../fonts/maven-pro/MavenPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+/*Import Museo*/
+@font-face {
+  font-family: 'Museo';
+  src: url("../fonts/museo/Museo500-Regular.otf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'MuseoLight';
+  src: url("../fonts/museo/Museo300-Regular.otf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'MuseoBold';
+  src: url("../fonts/museo/Museo700-Regular.otf") format("truetype");
+  font-weight: 700;
 }
 
 /*-----Mobile First------*/
@@ -5949,6 +5995,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: red;
+  /*test media query*/
 }
 
 @media screen and (min-width: 768px) {
@@ -5959,7 +6006,7 @@ body {
 
 body nav h1 span {
   font-family: 'Montserrat';
-  /*Test de font-face*/
+  /*Test de font-face, et ça a l'air d'aller*/
 }
 
 .burger {
@@ -5970,5 +6017,9 @@ body nav h1 span {
   .burger {
     display: none;
   }
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

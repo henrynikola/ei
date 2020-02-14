@@ -10,26 +10,32 @@
 <body>
     <!--Le header-->
     <header>
-        <div>
+        <div class="top">
             <nav>
-                <h1>
+                <h1 class="toplogo">
                     <a href="#">
-                        <!--<img src="img/logo_kazan.png" alt="Kazan">-->
+                        <img src="img/logo_kazan.png" title="Bienvenue à Kazan Smartcity" alt="Kazan">
                         <span>Kazan Smartcity</span>
                     </a>
                 </h1>
-                <button class="burger">
-                    <span class="burgermenu menu1"> </span>
-                    <span class="burgermenu menu2"> </span>
-                    <span class="burgermenu menu3"> </span>
-                </button>
-                <ul>
-                    <li><a href="#">Visits</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">GetTickets</a></li>
-                </ul>
-                <a href="#"><img src="img/search.svg" alt="Bouton Rechercher"></a>
+                <div class="navbar"> 
+                    <button class="burger">
+                        <span class="burgermenu menu1"> </span>
+                        <span class="burgermenu menu2"> </span>
+                        <span class="burgermenu menu3"> </span>
+                    </button>
+                    <ul class="navigation">
+                        <li><a href="#">Visits</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">GetTickets</a></li>
+                    </ul>
+                    <form action="#" class="recherche">
+                        <label for="searchbar" id="searchlabel"><img src="img/search.svg" alt="Bouton Rechercher"></label>
+                        <input type="text" id="searchbar" name="search" class="hidden">
+                        <button type="submit" class="hidden"><img src="img/search.svg" alt="Bouton Rechercher"></button>
+                    </form>
+                </div>
             </nav>
         </div>
         <div>
@@ -42,20 +48,20 @@
 
     <!--Début main content-->
     <main>
-        <section>
+        <section class="content">
             <h2>Que faire à Kazan ?</h2>
-            <ul>
-                <li>
+            <ul class="activites">
+                <li class="act act1">
                     <img src="img/activite/Kazan_Kremlin.jpg" alt="Kremlin de Kazan">
-                    <div>
+                    <div class="card">
                         <h3>Kremlin <span>de Kazan</span></h3>
-                        <p>Center of the city</p>
-                        <h4>Kremlin historique du Tatarstan</h4>
+                        <p class="city">Center of the city</p>
+                        <h4 class="centerCity">Kremlin historique du Tatarstan</h4>
                         <p>Construit sous les ordres d'Ivan IV, sur les ruines de l'ancien château des khans de Kazan. Il est inscrit sur la liste du patrimoine mondial de l'UNESCO. Organisation des Nations unies pour l'Éducation, la Science et la Culture</p>
-                        <div>
+                        <div class="more">
                             <a href="#"><i class="far fa-heart"></i></a>
                             <a href="#">Read More</a>
-                            <div>
+                            <div class="troispoints">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -63,17 +69,17 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="act act2">
                     <img src="img/activite/mosquee-qolsharif.jpg" alt="Mosquée Qolsharif">
-                    <div>
+                    <div class="card">
                         <h3>Mosquée <span>Qolsharif</span></h3>
-                        <p>Center of the city</p>
-                        <h4>La renaissance ottomane</h4>
+                        <p class="city">Center of the city</p>
+                        <h4 class="centerCity">La renaissance ottomane</h4>
                         <p>La mosquée Qolşärif est un édifice religieux du kremlin de la ville de Kazan en Russie. Elle était la plus grande mosquée d'Europe après celle d'Istanbul.</p>
-                        <div>
+                        <div class="more">
                             <a href="#"><i class="far fa-heart"></i></a>
                             <a href="#">Read More</a>
-                            <div>
+                            <div class="troispoints">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -81,17 +87,17 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="act act3">
                     <img src="img/activite/temple_multiple.jpg" alt="Temple de toutes les religions">
-                    <div>
+                    <div class="card">
                         <h3>Temple <span>of All Religions</span></h3>
-                        <p>West of the city</p>
-                        <h4>Temple, mosquée, synagogue,...</h4>
+                        <p class="city">West of the city</p>
+                        <h4 class="outCity">Temple, mosquée, synagogue,...</h4>
                         <p>Le temple de toutes les religions est un complexe unique comprenant plusieurs types d'architecture religieuse.</p>
-                        <div>
+                        <div class="more">
                             <a href="#"><i class="far fa-heart"></i></a>
                             <a href="#">Read More</a>
-                            <div>
+                            <div class="troispoints">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -99,17 +105,17 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="act act4">
                     <img src="img/activite/Baumana_Street_Kazan.jpg" alt="Bauman Street">
-                    <div>
+                    <div class="card">
                         <h3>Bauman <span>Street</span></h3>
-                        <p>Center of the city</p>
-                        <h4>Nikolay Bauman, révolutionnaire</h4>
+                        <p class="city">Center of the city</p>
+                        <h4 class="centerCity">Nikolay Bauman, révolutionnaire</h4>
                         <p>La Rue Baumana est une rue piétonne située au cœur de Kazan. La rue commence au pied du Kremlin et atteint la place Tukay, la place centrale de la ville.</p>
-                        <div>
+                        <div class="more">
                             <a href="#"><i class="far fa-heart"></i></a>
                             <a href="#">Read More</a>
-                            <div>
+                            <div class="troispoints">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -117,17 +123,17 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="act act5">
                     <img src="img/activite/aquapark.jpg" alt="Riviera Aquapark">
-                    <div>
+                    <div class="card">
                         <h3>Riviera <span>Aquapark</span></h3>
-                        <p>Center of the city</p>
-                        <h4>Le pouvoir magique et curatif de l'eau</h4>
+                        <p class="city">Center of the city</p>
+                        <h4 class="centerCity">Le pouvoir magique et curatif de l'eau</h4>
                         <p>L'un des plus grands au monde! Plus de 50 attractions différentes pour que chacun puisse trouver sa véritable vague d'émotions !</p>
-                        <div>
+                        <div class="more">
                             <a href="#"><i class="far fa-heart"></i></a>
                             <a href="#">Read More</a>
-                            <div>
+                            <div class="troispoints">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -135,17 +141,17 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="act act6">
                     <img src="img/activite/cat.jpg" alt="Cathédrale de l'Annonciation">
-                    <div>
+                    <div class="card">
                         <h3>Cathédrale <span>de l'Annonciation</span></h3>
-                        <p>South of the city</p>
-                        <h4>Architecture orthodoxe russe</h4>
+                        <p class="city">South of the city</p>
+                        <h4 class="outCity">Architecture orthodoxe russe</h4>
                         <p>Annexée au kremlin, c'est une église orthodoxe d'architecture russe datant du XIVᵉ siècle et modifiée jusqu'au XIXᵉ siècle.</p>
-                        <div>
+                        <div class="more">
                             <a href="#"><i class="far fa-heart"></i></a>
                             <a href="#">Read More</a>
-                            <div>
+                            <div class="troispoints">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -153,17 +159,17 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="act act7">
                     <img src="img/activite/goluboe_ozero.jpg" alt="Ozero Goluboye">
-                    <div>
+                    <div class="card">
                         <h3>Ozero <span>Goluboye</span></h3>
-                        <p>North of the city</p>
-                        <h4>Lac kartique de Kazan</h4>
+                        <p class="city">North of the city</p>
+                        <h4 class="outCity">Lac kartique de Kazan</h4>
                         <p>Textuellement "Lac Bleu", sa profondeur maximale est de 18 m. L'eau a rempli une caverne creusée dans du sédiment glaciaire qui s'est effondrée.</p>
-                        <div>
+                        <div class="more">
                             <a href="#"><i class="far fa-heart"></i></a>
                             <a href="#">Read More</a>
-                            <div>
+                            <div class="troispoints">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -171,17 +177,17 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="act act8">
                     <img src="img/activite/musee.jpg" alt="Museum Republic Tatarstan">
-                    <div>
+                    <div class="card">
                         <h3>Museum <span>Republic Tatarstan</span></h3>
-                        <p>Center of the city</p>
-                        <h4>L'histoire du Tatarstan</h4>
+                        <p class="city">Center of the city</p>
+                        <h4 class="centerCity">L'histoire du Tatarstan</h4>
                         <p>Le musée principal occupe le bâtiment de l'ancien Gostiny Dvor, qui est un monument historique et culturel d'importance fédérale.</p>
-                        <div>
+                        <div class="more">
                             <a href="#"><i class="far fa-heart"></i></a>
                             <a href="#">Read More</a>
-                            <div>
+                            <div class="troispoints">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -189,17 +195,17 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="act act9">
                     <img src="img/activite/lake.jpg" alt="Kaban Lake">
-                    <div>
+                    <div class="card">
                         <h3>Kaban <span>Lakes</span></h3>
-                        <p>East of the city</p>
-                        <h4>De l'eau en pleine ville</h4>
+                        <p class="city">East of the city</p>
+                        <h4 class="outCity">De l'eau en pleine ville</h4>
                         <p>Les lacs de Kaban sont des lacs qui, combinés avec d'autres (Nizhny Kaban, Verkhny Kaban et Sredny Kaban) font 1,86 kilomètres carrés, le plus grand lac du Tatarstan.</p>
-                        <div>
+                        <div class="more">
                             <a href="#"><i class="far fa-heart"></i></a>
                             <a href="#">Read More</a>
-                            <div>
+                            <div class="troispoints">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -207,17 +213,17 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="act act10">
                     <img src="img/activite/Kazan_Millennium_Bridge.jpg" alt="Millenium Bridge">
-                    <div>
+                    <div class="card">
                         <h3>Millenium <span>Bridge</span></h3>
-                        <p>North of the city</p>
-                        <h4>Pont à haubans</h4>
+                        <p class="city">North of the city</p>
+                        <h4 class="outCity">Pont à haubans</h4>
                         <p>Le pont Millennium enjambe la rivière Kazanka. Construit pour le millième anniversaire de Kazan, célébré en 2005, la forme de son pylône est un M.</p>
-                        <div>
+                        <div class="more">
                             <a href="#"><i class="far fa-heart"></i></a>
                             <a href="#">Read More</a>
-                            <div>
+                            <div class="troispoints">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -225,17 +231,17 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="act act11">
                     <img src="img/activite/hermitage.jpg" alt="Kazan Hermitage">
-                    <div>
+                    <div class="card">
                         <h3>Kazan <span>Hermitage</span></h3>
-                        <p>Center of the city</p>
-                        <h4>Palais des congrès et centre d'expositions</h4>
+                        <p class="city">Center of the city</p>
+                        <h4 class="centerCity">Palais des congrès et centre d'expositions</h4>
                         <p>Musée avec diverses expositions et centre de congrès internationnaux, l'Hermitage est un pôle culturel important du centre ville.</p>
-                        <div>
+                        <div class="more">
                             <a href="#"><i class="far fa-heart"></i></a>
                             <a href="#">Read More</a>
-                            <div>
+                            <div class="troispoints">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -243,17 +249,17 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="act act12">
                     <img src="img/activite/pierre-paul.jpg" alt="Eglise St Pierre et Paul">
-                    <div>
+                    <div class="card">
                         <h3>Eglise <span>St Pierre et Paul</span></h3>
-                        <p>Center of the city</p>
-                        <h4>Architecture Baroque</h4>
+                        <p class="city">Center of the city</p>
+                        <h4 class="centerCity">Architecture Baroque</h4>
                         <p>L’église Saint-Pierre-et-Paul est une église orthodoxe baroque située dans la vieille ville. Elle est associée à Pierre Le Grand arrivé à Kazan avant sa campagne persienne.</p>
-                        <div>
+                        <div class="more">
                             <a href="#"><i class="far fa-heart"></i></a>
                             <a href="#">Read More</a>
-                            <div>
+                            <div class="troispoints">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -263,9 +269,9 @@
                 </li>
             </ul>
         </section>
-        <div>
+        <div class="getticket">
             <a href="#">Get ticket</a>
-            <div>
+            <div class="payinfos">
                 <img src="img/card.svg" alt="paiement par carte">
                 <img src="img/paypal.svg" alt="PayPal accepté">
                 <p>P2600<span>RUR</span></p>
@@ -276,8 +282,8 @@
 
     <!--Début footer-->
     <footer>
-        <section>
-            <div>
+        <section class="infos">
+            <div class="tourism">
                 <div>
                     <h3>TatarStan Tourism</h3>
                     <img src="img/pin.svg" alt="location">
@@ -287,8 +293,8 @@
             </div>
             <img src="img/kazan-night.jpg" alt="Kazan pendant la nuit">
         </section>
-        <section>
-            <div>
+        <section class="bottom">
+            <div class="follow">
                 <h3>Follow US</h3>
                 <div>
                     <a href="#"><img src="img/slack.svg" alt="rejoindre le Slack"></a>
@@ -299,7 +305,7 @@
                     <p>@kazan2019</p>
                 </div>
             </div>
-            <div>
+            <div class="visit">
                 <h4>Visit Tatarstan</h4>
                 <p>+7 843-206-00-14</p>
                 <span>(speaker's support)</span>

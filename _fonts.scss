@@ -1,5 +1,89 @@
+/*Import Montserrat*/
 @font-face{
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'),
-        url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@mixin Montserrat{
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+
+@font-face{
+    font-family: 'MontserratBold';
+    src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@mixin MontserratBold{
+    font-family: 'MontserratBold';
+    font-weight: 700;
+}
+
+
+@font-face{
+    font-family: 'MontserratLight';
+    src: url('../fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@mixin MontserratLight{
+    font-family: 'MontserratLight';
+    font-weight: 300;
+}
+
+
+/*Import MavenPro*/
+@font-face{
+    font-family: 'MavenPro';
+    src: url('../fonts/maven-pro/MavenPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@mixin MavenPro{
+    font-family: 'MavenPro';
+    font-weight:400;
+}
+
+
+@font-face{
+    font-family: 'MavenProBold';
+    src: url('../fonts/maven-pro/MavenPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@mixin MavenProBold{
+    font-family: 'MavenProBold';
+    font-weight: 700;
+}
+
+
+/*Import Museo*/
+@font-face{
+    font-family: 'Museo';
+    src: url('../fonts/museo/Museo500-Regular.otf') format('truetype');
+    font-weight: 500;    
+}
+@mixin Museo {
+    font-family: 'Museo';
+    font-weight: 500;
+}
+
+
+@font-face{
+    font-family: 'MuseoLight';
+    src: url('../fonts/museo/Museo300-Regular.otf') format('truetype');
+    font-weight: 300;
+}
+@mixin MuseoLight {
+    font-family: 'MuseoLight';
+    font-weight: 300;
+}
+
+
+@font-face{
+    font-family: 'MuseoBold';
+    src: url('../fonts/museo/Museo700-Regular.otf') format('truetype');
+    font-weight: 700;
+}
+@mixin MuseoBold {
+    font-family:'MuseoBold';
+    font-weight:700;    
 }
