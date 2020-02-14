@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*fichier global avec tous les imports*/
 /*!
  * Font Awesome Free 5.12.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -5994,7 +5995,6 @@ readers do not read off random characters that represent icons */
 body {
   margin: 0;
   padding: 0;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -6003,49 +6003,300 @@ body {
   }
 }
 
+body img {
+  /*temporaire*/
+  width: 30%;
+  height: auto;
+}
+
 body header {
+  /* CHECK ! ENFIN !*/
   height: 100vh;
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #00d8ff;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(48, 58, 65, 0.801)), to(rgba(78, 66, 80, 0.911))), url("../img/header.jpg");
+  background-image: linear-gradient(rgba(48, 58, 65, 0.801) 60%, rgba(78, 66, 80, 0.911)), url("../img/header.jpg");
+  background-repeat: no-repeat;
+  background-position-x: -825px;
+  background-size: 1400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
 }
 
-body header nav {
+body header .top nav {
   height: 200px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-body header nav .toplogo {
+body header .top nav .toplogo {
   margin: 0;
 }
 
-body header nav .toplogo span {
+body header .top nav .toplogo span {
   display: none;
 }
 
-body header nav .toplogo a {
+body header .top nav .toplogo a {
   width: 200px;
   height: 136px;
   display: inline-block;
   margin: 1em 0 0 1.5em;
 }
 
-body header nav .toplogo a img {
+body header .top nav .toplogo a img {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
 
-.burger {
-  display: block;
+body header .top nav .navbar {
+  width: 100px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .top nav .navbar .burger {
+  width: 30px;
+  height: 30px;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  z-index: 2;
 }
 
 @media screen and (min-width: 768px) {
-  .burger {
+  body header .top nav .navbar .burger {
     display: none;
   }
+}
+
+body header .top nav .navbar .burger .burgermenu {
+  width: 30px;
+  height: 3px;
+  background-color: #00d8ff;
+  display: block;
+  margin-left: auto;
+}
+
+body header .top nav .navbar .burger .menu1 {
+  width: 25px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  display: block;
+}
+
+body header .top nav .navbar .burger .menu2 {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  display: block;
+}
+
+body header .top nav .navbar .burger .menu3 {
+  width: 15px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  display: block;
+}
+
+body header .top nav .navbar .burger:focus .burgermenu {
+  background-color: #284e68;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header .top nav .navbar .burger:focus .menu1 {
+  width: 42px;
+  -webkit-transform: translateX(-15px) rotate(-45deg);
+          transform: translateX(-15px) rotate(-45deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  position: relative;
+  top: 0;
+}
+
+body header .top nav .navbar .burger:focus .menu2 {
+  display: none;
+}
+
+body header .top nav .navbar .burger:focus .menu3 {
+  width: 42px;
+  -webkit-transform: translateX(-15px) rotate(45deg);
+          transform: translateX(-15px) rotate(45deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  position: relative;
+  bottom: 0px;
+}
+
+body header .top nav .navbar .navigation {
+  position: absolute;
+  right: -30em;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background-color: #00d8ff;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0 1em 2em 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+body header .top nav .navbar .navigation li {
+  list-style: none;
+  margin: .5em 0;
+}
+
+body header .top nav .navbar .navigation li a {
+  text-decoration: none;
+  text-align: right;
+  font-family: 'MontserratBold';
+  font-weight: 700;
+  font-size: 2rem;
+  color: #284e68;
+}
+
+body header .top nav .navbar .navigation li:last-of-type {
+  padding-bottom: 2em;
+}
+
+body header .top nav .navbar .recherche {
+  position: absolute;
+  right: -30em;
+  z-index: 1;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+body header .top nav .navbar .burger:focus ~ .navigation {
+  right: 0px;
+  position: fixed;
+}
+
+body header .top nav .navbar .burger:focus ~ .recherche {
+  position: fixed;
+  height: 20px;
+  width: 20px;
+  top: 55%;
+  right: 1em;
+}
+
+body header .top nav .navbar .burger:focus ~ .recherche label {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body header .title {
+  margin-top: auto;
+  margin-bottom: 2em;
+}
+
+body header .title h2 {
+  color: #00d8ff;
+  width: 250px;
+  margin: 0;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'MavenPro';
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+body header .title h2 span {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  font-size: 4rem;
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+
+body header .title p {
+  display: none;
+}
+
+body header .schedule {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  background-color: #00d8ff;
+  padding: 18px 8px;
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50px;
+  margin-bottom: 2em;
+  -webkit-box-shadow: 0px 0px 15px -5px #333;
+          box-shadow: 0px 0px 15px -5px #333;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .hidden {
