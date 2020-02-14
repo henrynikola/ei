@@ -5,37 +5,4 @@
 @import "variables";
 @import "fonts";
 @import "couleurs";
-
-
-/*-----Mobile First------*/
-/*Pour les media queries, il faut rajouter à la fin des déclarations mobile first "@include desktop{déclarations desktop}"*/
-body{
-    margin:0;
-    padding:0;
-    background-color: red; /*test media query*/
-
-    @include desktop{
-        background-color: #fff;
-    }
-
-    nav{
-        h1{
-            span{
-                font-family: 'Montserrat';
-                /*Test de font-face, et ça a l'air d'aller*/
-            }
-        }
-    }
-}
-
-.burger{
-    display: block;
-
-    @include desktop{
-        display: none;
-    }
-}
-
-.hidden{
-    display: none;
-}
+@import "mobile";

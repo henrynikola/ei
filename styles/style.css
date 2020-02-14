@@ -5994,19 +5994,48 @@ readers do not read off random characters that represent icons */
 body {
   margin: 0;
   padding: 0;
-  background-color: red;
-  /*test media query*/
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
   body {
-    background-color: #fff;
+    /*déclarations desktop*/
   }
 }
 
-body nav h1 span {
-  font-family: 'Montserrat';
-  /*Test de font-face, et ça a l'air d'aller*/
+body header {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #00d8ff;
+}
+
+body header nav {
+  height: 200px;
+  width: 100%;
+}
+
+body header nav .toplogo {
+  margin: 0;
+}
+
+body header nav .toplogo span {
+  display: none;
+}
+
+body header nav .toplogo a {
+  width: 200px;
+  height: 136px;
+  display: inline-block;
+  margin: 1em 0 0 1.5em;
+}
+
+body header nav .toplogo a img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .burger {

@@ -1,0 +1,54 @@
+/*-----Mobile First------*/
+/*Pour les media queries, il faut rajouter à la fin des déclarations mobile first "@include desktop{déclarations desktop}"*/
+body{
+    margin:0;
+    padding:0;
+    cursor: pointer;
+
+    @include desktop{
+        /*déclarations desktop*/
+    }
+
+    header{
+        height: 100vh;
+        width:100%;
+        margin:0;
+        padding:0;
+        background-color:$bleu;
+        nav{
+            height: 200px;
+            width:100%;
+        
+            .toplogo{
+                margin: 0;
+                span{
+                    display: none;
+                }
+                a{
+                    width: 200px;
+                    height: 136px;
+                    display: inline-block;
+                    margin: 1em 0 0 1.5em;
+                    img{
+                        margin:0;
+                        padding:0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.burger{
+    display: block;
+
+    @include desktop{
+        display: none;
+    }
+}
+
+.hidden{
+    display: none;
+}
