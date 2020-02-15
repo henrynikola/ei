@@ -48,63 +48,85 @@ header{ /* CHECK ! ENFIN !*/
                     flex-direction: column;
                     justify-content: space-between;
                     background-color: transparent;
+                    background: none;
                     outline:none;
                     border:none;
                     padding:0;
-                    z-index: 2;
+                    z-index: 3;
+                    opacity: 0;
 
                     @include desktop{
                         display:none;
                     }
 
-                    .burgermenu{
-                        width: 30px;
-                        height: 3px;
-                        background-color: $bleu;
-                        display: block;
-                        margin-left:auto;
-                    }
-                    .menu1{
-                        width:25px;
-                        transition: .5s ease-in-out;
-                        display: block;
-                    }
-                    .menu2{
-                        transition: all .5s ease-in-out;
-                        display:block;
-                    }
-                    .menu3{
-                        width:15px;
-                        transition: .5s ease-in-out;
-                        display:block;
-                    }
-                    &:focus{
-                        .burgermenu{
-                            background-color: $bleu2;
+                    
+                    &:checked {
+                        ~.burgermenu{
                             position: fixed;
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
+                            z-index: 2;
+                            overflow: hidden;
+                            background: none;
+                        
+                            .menu1{
+                                width: 42px;
+                                transform: translateY(-14px) rotate(-45deg) ;
+                                transform-origin: top right;
+                                position: relative;
+                                top:0;
+                                background-color: $bleu2;
+                                z-index: 3;
+                            }
+                            .menu2{
+                                display: none;
+                                z-index: 3;
+                            }
+                            .menu3{
+                                width: 42px;
+                                transform: translateY(14px) rotate(45deg) ;
+                                transform-origin: bottom right;
+                                position: relative;
+                                bottom: 0px;
+                                background-color: $bleu2;
+                                z-index: 3;
+                            }
                         }
+                    }  
+                }
+                .burgermenu{
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        position: absolute;
+                        top:50px;
                         .menu1{
-                            width: 42px;
-                            transform: translateX(-15px) rotate(-45deg) ;
-                            transform-origin: top right;
-                            position: relative;
-                            top:0;
+                            width:25px;
+                            height: 3px;
+                            display: block;
+                            background-color: $bleu;
+                            transition: .5s ease-in-out;
                         }
                         .menu2{
-                            display: none;
+                            display: block;
+                            background-color: $bleu;
+                            height: 3px;
+                            width: 100%;
+                            transition: .5s ease-in-out;
                         }
                         .menu3{
-                            width: 42px;
-                            transform: translateX(-15px) rotate(45deg) ;
-                            transform-origin: bottom right;
-                            position: relative;
-                            bottom: 0px;
+                            width:15px;
+                            height: 3px;
+                            display:block;
+                            background-color: $bleu;
+                            transition: .5s ease-in-out;
                         }
                     }
-                }
+
                 .navigation{
                     position: absolute;
                     right: -30em;
@@ -118,7 +140,7 @@ header{ /* CHECK ! ENFIN !*/
                     justify-content: flex-end;
                     align-items: flex-end;
                     padding:0 1em 2em 0;
-                    transition: all .5s ease-in-out;
+                    transition: .5s ease-in-out;
                     li{
                         list-style: none;
                         margin: .5em 0;
@@ -140,11 +162,11 @@ header{ /* CHECK ! ENFIN !*/
                     z-index:1;
                     transition: all .5s ease-in-out;
                 }
-                .burger:focus ~.navigation{
+                .burger:checked ~.navigation{
                     right:0px;
                     position:fixed;
                 }
-                .burger:focus ~.recherche{
+                .burger:checked ~.recherche{
                     position:fixed;
                     height: 20px;
                     width: 20px;

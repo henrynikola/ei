@@ -6099,10 +6099,12 @@ body header .top nav .navbar .burger {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: transparent;
+  background: none;
   outline: none;
   border: none;
   padding: 0;
-  z-index: 2;
+  z-index: 3;
+  opacity: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -6111,36 +6113,7 @@ body header .top nav .navbar .burger {
   }
 }
 
-body header .top nav .navbar .burger .burgermenu {
-  width: 30px;
-  height: 3px;
-  background-color: #00d8ff;
-  display: block;
-  margin-left: auto;
-}
-
-body header .top nav .navbar .burger .menu1 {
-  width: 25px;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  display: block;
-}
-
-body header .top nav .navbar .burger .menu2 {
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  display: block;
-}
-
-body header .top nav .navbar .burger .menu3 {
-  width: 15px;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  display: block;
-}
-
-body header .top nav .navbar .burger:focus .burgermenu {
-  background-color: #284e68;
+body header .top nav .navbar .burger:checked ~ .burgermenu {
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6152,30 +6125,85 @@ body header .top nav .navbar .burger:focus .burgermenu {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 2;
+  overflow: hidden;
+  background: none;
 }
 
-body header .top nav .navbar .burger:focus .menu1 {
+body header .top nav .navbar .burger:checked ~ .burgermenu .menu1 {
   width: 42px;
-  -webkit-transform: translateX(-15px) rotate(-45deg);
-          transform: translateX(-15px) rotate(-45deg);
+  -webkit-transform: translateY(-14px) rotate(-45deg);
+          transform: translateY(-14px) rotate(-45deg);
   -webkit-transform-origin: top right;
           transform-origin: top right;
   position: relative;
   top: 0;
+  background-color: #284e68;
+  z-index: 3;
 }
 
-body header .top nav .navbar .burger:focus .menu2 {
+body header .top nav .navbar .burger:checked ~ .burgermenu .menu2 {
   display: none;
+  z-index: 3;
 }
 
-body header .top nav .navbar .burger:focus .menu3 {
+body header .top nav .navbar .burger:checked ~ .burgermenu .menu3 {
   width: 42px;
-  -webkit-transform: translateX(-15px) rotate(45deg);
-          transform: translateX(-15px) rotate(45deg);
+  -webkit-transform: translateY(14px) rotate(45deg);
+          transform: translateY(14px) rotate(45deg);
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
   position: relative;
   bottom: 0px;
+  background-color: #284e68;
+  z-index: 3;
+}
+
+body header .top nav .navbar .burgermenu {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  top: 50px;
+}
+
+body header .top nav .navbar .burgermenu .menu1 {
+  width: 25px;
+  height: 3px;
+  display: block;
+  background-color: #00d8ff;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+body header .top nav .navbar .burgermenu .menu2 {
+  display: block;
+  background-color: #00d8ff;
+  height: 3px;
+  width: 100%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+body header .top nav .navbar .burgermenu .menu3 {
+  width: 15px;
+  height: 3px;
+  display: block;
+  background-color: #00d8ff;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 body header .top nav .navbar .navigation {
@@ -6200,8 +6228,8 @@ body header .top nav .navbar .navigation {
       -ms-flex-align: end;
           align-items: flex-end;
   padding: 0 1em 2em 0;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 body header .top nav .navbar .navigation li {
@@ -6230,12 +6258,12 @@ body header .top nav .navbar .recherche {
   transition: all .5s ease-in-out;
 }
 
-body header .top nav .navbar .burger:focus ~ .navigation {
+body header .top nav .navbar .burger:checked ~ .navigation {
   right: 0px;
   position: fixed;
 }
 
-body header .top nav .navbar .burger:focus ~ .recherche {
+body header .top nav .navbar .burger:checked ~ .recherche {
   position: fixed;
   height: 20px;
   width: 20px;
@@ -6243,7 +6271,7 @@ body header .top nav .navbar .burger:focus ~ .recherche {
   right: 1em;
 }
 
-body header .top nav .navbar .burger:focus ~ .recherche label {
+body header .top nav .navbar .burger:checked ~ .recherche label {
   width: 100%;
   height: 100%;
   display: block;
