@@ -1,0 +1,129 @@
+footer{
+    background: url('../img/brent-cox-mid.jpg');
+    background-color: rgba(40, 78, 104, .5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 10000px rgba(40,78,104,.7);
+    display: block;
+
+    section{
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        left: 1em;
+    }
+
+    .infos{
+        padding-top: 6em;
+
+        img{
+            display: none;
+        }
+
+        .tourism{
+            div{
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: row-reverse;
+                height: 20px;
+                
+                h3{
+                    margin: 0;
+                    color: white;
+                    @include MontserratBold;
+                }
+                img{
+                    display: block;
+                    width: 20px;
+                    margin-right: 2em;
+                }
+            }
+            
+            p{
+                color: white;
+                @include Montserrat;
+                font-size: .9em;
+            }
+            p:first-of-type{
+                @include MuseoBold;
+                margin-bottom: 0;
+                margin-top: 2em;
+            }
+        }
+    }
+
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 2em;
+        padding-bottom: 2em;
+
+        .visit{
+            order: -1;
+            color: white;
+            @include Montserrat;
+            font-size: .9em;
+            line-height: 2em;
+
+            h4, p{
+                margin: 0;
+            }
+
+            h4{
+                font-size: .8em;
+            }
+        }
+
+        img{
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 2em;
+            position: relative;
+            left: 1em;
+        }
+
+        .follow{
+            background-color: #fff;
+            border-radius: 10px;
+            margin-top: 2em;
+            width: 100%;
+            height: 200px;
+
+            h3{
+                margin: 0;
+                color: $bleu;
+                @include MontserratBold;
+                height: 5em;
+                padding-left: 2em;
+                display: flex;
+                align-items: center;
+            }
+
+            div{
+                display: flex;
+                align-items: center;
+
+                a{
+                    color: $bleu2;
+                    font-size: 2.5em;
+                    margin: 0 .5em;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    img{
+                        width: 40px;
+                        height: auto;
+                        margin: 0;
+                        position: unset;
+                    }
+                }
+
+                p{
+                    color: $bleu2;
+                    @include Montserrat;
+                }
+            }
+        }
+    }
+}

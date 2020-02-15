@@ -61,6 +61,7 @@ header{ /* CHECK ! ENFIN !*/
 
                     
                     &:checked {
+                        position: fixed;
                         ~.burgermenu{
                             position: fixed;
                             display: flex;
@@ -168,17 +169,29 @@ header{ /* CHECK ! ENFIN !*/
                 }
                 .burger:checked ~.recherche{
                     position:fixed;
-                    height: 20px;
-                    width: 20px;
+                    height: 30px;
+                    width: 30px;
                     top: 55%;
                     right: 1em;
                     label{
                         width: 100%;
                         height: 100%;
                         display: block;
-                        background-image: url('../img/search.svg');
+                        /*background-image: url('../img/search.svg');
                         background-repeat: no-repeat;
-                        background-size: cover;
+                        background-size: cover;*/
+
+                        &:after{
+                            content: "\f002";
+                            font-family: 'Font Awesome 5 Free';
+                            font-size: 1.6em;
+                            color: $bleu2;
+                            display: inline-block;
+                            font-style: normal;
+                            font-variant: normal;
+                            text-rendering: auto;
+                            font-weight: 700;
+                        }
                     }
                 }
             }

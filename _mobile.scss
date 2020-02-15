@@ -8,13 +8,9 @@ body{
         /*déclarations desktop*/
     }
 
-    img{ /*temporaire*/
-        width: 30%;
-        height: auto;
-    }
-
     @import 'header';
     @import 'main';
+    @import 'footer';
 }
 
 .hidden{
