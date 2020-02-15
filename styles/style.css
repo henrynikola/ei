@@ -6352,6 +6352,7 @@ body main {
 body main .content {
   width: 100%;
   margin: 3em 0;
+  margin-bottom: 0;
 }
 
 body main .content h2 {
@@ -6364,11 +6365,26 @@ body main .content h2 {
 body main .content .activites {
   padding: 0;
   list-style: none;
+  /*En js, prévoir un script qui ajoute dynamiquement la classe .reveal 
+            aux li qui sont "touch"*/
+  /*Sur desktop, ajouter la classe .reveal aux li qui sont survolés (hover)*/
+  /*A priori, la classe se retire quand on ne survole plus (à vérifier)*/
 }
 
 body main .content .activites .act {
   display: block;
   margin-bottom: 1em;
+  position: relative;
+}
+
+body main .content .activites .act:before {
+  content: '\00a0';
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: #f8f8f8;
+  position: absolute;
+  left: 1em;
 }
 
 body main .content .activites .act figure {
@@ -6381,7 +6397,7 @@ body main .content .activites .act figure img {
   display: none;
 }
 
-body main .content .activites .act figure figcaption {
+body main .content .activites .act figure .card {
   background-color: #f8f8f8;
   padding-left: 2em;
   height: 100px;
@@ -6400,24 +6416,24 @@ body main .content .activites .act figure figcaption {
       align-self: flex-start;
 }
 
-body main .content .activites .act figure figcaption h4, body main .content .activites .act figure figcaption h4 + p {
+body main .content .activites .act figure .card h4, body main .content .activites .act figure .card h4 + p {
   display: none;
 }
 
-body main .content .activites .act figure figcaption .more {
+body main .content .activites .act figure .card .more {
   width: 30px;
   height: 10px;
   display: block;
   position: absolute;
-  top: calc(50%-3px);
+  top: 50%;
   right: 2em;
 }
 
-body main .content .activites .act figure figcaption .more a {
+body main .content .activites .act figure .card .more a {
   display: none;
 }
 
-body main .content .activites .act figure figcaption .more .troispoints {
+body main .content .activites .act figure .card .more .troispoints {
   width: 25px;
   height: 10px;
   display: -webkit-box;
@@ -6432,7 +6448,7 @@ body main .content .activites .act figure figcaption .more .troispoints {
   margin: 0;
 }
 
-body main .content .activites .act figure figcaption .more .troispoints span {
+body main .content .activites .act figure .card .more .troispoints span {
   display: block;
   width: 5px;
   height: 5px;
@@ -6440,11 +6456,11 @@ body main .content .activites .act figure figcaption .more .troispoints span {
   border-radius: 5px;
 }
 
-body main .content .activites .act figure figcaption h3, body main .content .activites .act figure figcaption p {
+body main .content .activites .act figure .card h3, body main .content .activites .act figure .card p {
   margin: 0;
 }
 
-body main .content .activites .act figure figcaption h3 {
+body main .content .activites .act figure .card h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6461,17 +6477,180 @@ body main .content .activites .act figure figcaption h3 {
   font-size: 1.5em;
 }
 
-body main .content .activites .act figure figcaption h3 span {
+body main .content .activites .act figure .card h3 span {
   font-family: 'Museo';
   font-weight: 500;
   font-size: .8em;
 }
 
-body main .content .activites .act figure figcaption .city {
+body main .content .activites .act figure .card .city {
   font-family: 'Montserrat';
   font-weight: 400;
   color: #00d8ff;
   margin-top: .3em;
+}
+
+body main .content .activites .act figure .card .centerCity {
+  color: #d4ce9a;
+}
+
+body main .content .activites .act figure .card .outCity {
+  color: #f899b4;
+}
+
+body main .content .activites .reveal:before {
+  background-color: #284e68;
+}
+
+body main .content .activites .reveal figure {
+  height: 600px;
+  position: relative;
+  padding: 0 2em;
+}
+
+body main .content .activites .reveal figure img {
+  display: block;
+  position: absolute;
+  top: 110px;
+  width: 81%;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body main .content .activites .reveal figure .card {
+  background: none;
+  padding-left: 0;
+}
+
+body main .content .activites .reveal figure .card h3 {
+  color: #f8f8f8;
+}
+
+body main .content .activites .reveal figure .card h4 {
+  display: block;
+  position: absolute;
+  top: 330px;
+  font-family: 'MontserratBold';
+  font-weight: 700;
+}
+
+body main .content .activites .reveal figure .card h4 + p {
+  display: block;
+  position: absolute;
+  top: 380px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  color: #f8f8f8;
+}
+
+body main .content .activites .reveal figure .card .more {
+  width: 100%;
+  height: 500%;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body main .content .activites .reveal figure .card .more a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  width: 50%;
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+
+body main .content .activites .reveal figure .card .more a:last-of-type {
+  text-align: center;
+  border-left: 1px solid #f8f8f8;
+}
+
+body main .content .activites .reveal figure .card .more .troispoints {
+  position: absolute;
+  right: 0;
+  top: -.5em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 15px;
+  width: 10px;
+}
+
+body main .content .activites .reveal figure .card .more .troispoints span:last-of-type {
+  display: none;
+}
+
+body main .getticket {
+  width: 70%;
+  height: 90px;
+  margin: 0 auto;
+  background-color: #284e68;
+  position: relative;
+  left: 1em;
+  top: 40px;
+  -webkit-box-shadow: 0px 0px 10px 0px #d6d6d6;
+          box-shadow: 0px 0px 10px 0px #d6d6d6;
+}
+
+body main .getticket a {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  background-color: #00d8ff;
+  color: #284e68;
+  text-decoration: none;
+  font-family: 'MontserratBold';
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body main .getticket .payinfos {
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body main .getticket .payinfos img {
+  width: 25px;
+  height: auto;
+  margin: 0 .5em;
+}
+
+body main .getticket .payinfos p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  margin-right: .5em;
+  color: white;
+  font-family: 'MontserratBold';
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body main .getticket .payinfos p span {
+  color: #00d8ff;
+  font-family: 'Montserrat';
+  font-weight: 400;
 }
 
 .hidden {
