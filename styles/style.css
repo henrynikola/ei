@@ -6611,6 +6611,13 @@ body main .getticket {
           box-shadow: 0px 0px 10px 0px #d6d6d6;
 }
 
+@media screen and (min-width: 768px) {
+  body main .getticket {
+    width: 15em;
+    left: 0;
+  }
+}
+
 body main .getticket a {
   width: 100%;
   height: 50px;
@@ -6673,6 +6680,12 @@ body footer {
   display: block;
 }
 
+@media screen and (min-width: 768px) {
+  body footer {
+    padding-bottom: 3em;
+  }
+}
+
 body footer section {
   width: 80%;
   margin: 0 auto;
@@ -6680,12 +6693,48 @@ body footer section {
   left: 1em;
 }
 
+@media screen and (min-width: 768px) {
+  body footer section {
+    left: 0;
+    width: 70vw;
+  }
+}
+
 body footer .infos {
   padding-top: 6em;
 }
 
+@media screen and (min-width: 768px) {
+  body footer .infos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 body footer .infos img {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .infos img {
+    display: block;
+    width: 45%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-box-shadow: 0px 0px 10px 0px #d6d6d6;
+            box-shadow: 0px 0px 10px 0px #d6d6d6;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body footer .infos .tourism {
+    width: 45%;
+  }
 }
 
 body footer .infos .tourism div {
@@ -6702,6 +6751,19 @@ body footer .infos .tourism div {
   height: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  body footer .infos .tourism div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: auto;
+  }
+}
+
 body footer .infos .tourism div h3 {
   margin: 0;
   color: white;
@@ -6709,10 +6771,27 @@ body footer .infos .tourism div h3 {
   font-weight: 700;
 }
 
+@media screen and (min-width: 768px) {
+  body footer .infos .tourism div h3 {
+    font-size: 1.5em;
+  }
+}
+
 body footer .infos .tourism div img {
   display: block;
   width: 20px;
+  height: auto;
   margin-right: 2em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .infos .tourism div img {
+    margin-right: 8em;
+    margin-left: auto;
+    width: 25px;
+  }
 }
 
 body footer .infos .tourism p {
@@ -6722,11 +6801,23 @@ body footer .infos .tourism p {
   font-size: .9em;
 }
 
+@media screen and (min-width: 768px) {
+  body footer .infos .tourism p {
+    font-size: 1em;
+  }
+}
+
 body footer .infos .tourism p:first-of-type {
   font-family: 'MuseoBold';
   font-weight: 700;
   margin-bottom: 0;
   margin-top: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .infos .tourism p:first-of-type {
+    font-size: 1.2em;
+  }
 }
 
 body footer .bottom {
@@ -6744,6 +6835,18 @@ body footer .bottom {
   padding-bottom: 2em;
 }
 
+@media screen and (min-width: 768px) {
+  body footer .bottom {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
 body footer .bottom .visit {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
@@ -6753,6 +6856,17 @@ body footer .bottom .visit {
   font-weight: 400;
   font-size: .9em;
   line-height: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .bottom .visit {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    font-size: 1em;
+    margin-left: 3em;
+    margin-bottom: 2em;
+  }
 }
 
 body footer .bottom .visit h4, body footer .bottom .visit p {
@@ -6771,12 +6885,43 @@ body footer .bottom img {
   left: 1em;
 }
 
+@media screen and (min-width: 768px) {
+  body footer .bottom img {
+    width: 15%;
+    height: auto;
+    left: 0;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
 body footer .bottom .follow {
   background-color: #fff;
   border-radius: 10px;
   margin-top: 2em;
   width: 100%;
   height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .bottom .follow {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 170px;
+  }
+  body footer .bottom .follow div:last-of-type {
+    margin-right: 2em;
+  }
 }
 
 body footer .bottom .follow h3 {
@@ -6792,6 +6937,12 @@ body footer .bottom .follow h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  body footer .bottom .follow h3 {
+    width: 100%;
+  }
 }
 
 body footer .bottom .follow div {

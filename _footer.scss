@@ -6,36 +6,80 @@ footer{
     box-shadow: inset 0 0 0 10000px rgba(40,78,104,.7);
     display: block;
 
+    @include desktop{
+        padding-bottom: 3em;
+    }
+
     section{
         width: 80%;
         margin: 0 auto;
         position: relative;
         left: 1em;
+
+        @include desktop{
+            left:0;
+            width: 70vw;
+        }
     }
 
     .infos{
         padding-top: 6em;
 
+        @include desktop{
+            display: flex;
+            justify-content: space-between;
+        }
+
         img{
             display: none;
+
+            @include desktop{
+                display: block;
+                width: 45%;
+                height: 250px;
+                object-fit: cover;
+                box-shadow: 0px 0px 10px 0px $grisclair;
+            }
         }
 
         .tourism{
+
+            @include desktop{
+                width: 45%;
+            }
             div{
                 display: flex;
                 justify-content: flex-end;
                 flex-direction: row-reverse;
                 height: 20px;
+
+                @include desktop{
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    height: auto;
+                }
                 
                 h3{
                     margin: 0;
                     color: white;
                     @include MontserratBold;
+
+                    @include desktop{
+                        font-size: 1.5em;
+                    }
                 }
                 img{
                     display: block;
                     width: 20px;
+                    height: auto;
                     margin-right: 2em;
+                    box-shadow: none;
+
+                    @include desktop{
+                        margin-right: 8em;
+                        margin-left: auto;
+                        width: 25px;
+                    }
                 }
             }
             
@@ -43,11 +87,19 @@ footer{
                 color: white;
                 @include Montserrat;
                 font-size: .9em;
+
+                @include desktop{
+                    font-size: 1em;
+                }
             }
             p:first-of-type{
                 @include MuseoBold;
                 margin-bottom: 0;
                 margin-top: 2em;
+
+                @include desktop{
+                    font-size: 1.2em;
+                }
             }
         }
     }
@@ -59,12 +111,24 @@ footer{
         margin-top: 2em;
         padding-bottom: 2em;
 
+        @include desktop{
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
         .visit{
             order: -1;
             color: white;
             @include Montserrat;
             font-size: .9em;
             line-height: 2em;
+
+            @include desktop{
+                order: 0;
+                font-size: 1em;
+                margin-left: 3em;
+                margin-bottom: 2em;
+            }
 
             h4, p{
                 margin: 0;
@@ -81,6 +145,14 @@ footer{
             margin-top: 2em;
             position: relative;
             left: 1em;
+
+            @include desktop{
+                width: 15%;
+                height: auto;
+                left: 0;
+                margin-left: auto;
+                margin-right: 0;
+            }
         }
 
         .follow{
@@ -90,6 +162,19 @@ footer{
             width: 100%;
             height: 200px;
 
+            @include desktop{
+                width: 40%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                height: 170px;
+
+                div:last-of-type{
+                    margin-right: 2em;
+                }
+            }
+
             h3{
                 margin: 0;
                 color: $bleu;
@@ -98,6 +183,10 @@ footer{
                 padding-left: 2em;
                 display: flex;
                 align-items: center;
+
+                @include desktop{
+                    width: 100%;
+                }
             }
 
             div{
