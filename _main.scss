@@ -8,19 +8,38 @@ main{
         margin: 3em 0;
         margin-bottom: 0;
 
+        @include desktop{
+            width: 70vw;
+        }
+
         h2{
             text-align: center;
             @include MontserratBold;
             color: $bleu;
+
+            @include desktop{
+                text-align: left;
+            }
         }
 
         .activites{
             padding: 0;
             list-style: none;
+            
+            @include desktop{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-gap: 30px;
+            }
             .act{
                 display: block;
                 margin-bottom: 1em;
                 position: relative;
+
+                @include desktop{
+                    margin: 0;
+                }
 
                 &:before{
                     content: '\00a0';
@@ -30,6 +49,10 @@ main{
                     background-color: $gris;
                     position: absolute;
                     left: 1em;
+
+                    @include desktop{
+                        display: none;
+                    }
                 }
 
                 figure{
@@ -37,8 +60,19 @@ main{
                     margin-left:2em;
                     background-color: $bleu2;
 
+                    @include desktop{
+                        margin-left: 0;
+                    }
+
                     img{
                         display: none;
+
+                        @include desktop{
+                            display: block;
+                            width: 100%;
+                            height: 300px;
+                            object-fit: cover;
+                        }
                     }
                     .card{
                         background-color: $gris;
@@ -61,6 +95,10 @@ main{
                             position: absolute;
                             top: 50%;
                             right: 2em;
+
+                            @include desktop{
+                                display: none;
+                            }
                             
                             a{
                                 display:none;
@@ -97,6 +135,8 @@ main{
                             span{
                                 @include Museo;
                                 font-size:.8em;
+                                position: relative;
+                                top: -.4em;
                             }
                         }
 

@@ -6365,11 +6365,23 @@ body main .content {
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 768px) {
+  body main .content {
+    width: 70vw;
+  }
+}
+
 body main .content h2 {
   text-align: center;
   font-family: 'MontserratBold';
   font-weight: 700;
   color: #00d8ff;
+}
+
+@media screen and (min-width: 768px) {
+  body main .content h2 {
+    text-align: left;
+  }
 }
 
 body main .content .activites {
@@ -6381,10 +6393,28 @@ body main .content .activites {
   /*A priori, la classe se retire quand on ne survole plus (à vérifier)*/
 }
 
+@media screen and (min-width: 768px) {
+  body main .content .activites {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+}
+
 body main .content .activites .act {
   display: block;
   margin-bottom: 1em;
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  body main .content .activites .act {
+    margin: 0;
+  }
 }
 
 body main .content .activites .act:before {
@@ -6397,14 +6427,36 @@ body main .content .activites .act:before {
   left: 1em;
 }
 
+@media screen and (min-width: 768px) {
+  body main .content .activites .act:before {
+    display: none;
+  }
+}
+
 body main .content .activites .act figure {
   margin: 0;
   margin-left: 2em;
   background-color: #284e68;
 }
 
+@media screen and (min-width: 768px) {
+  body main .content .activites .act figure {
+    margin-left: 0;
+  }
+}
+
 body main .content .activites .act figure img {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body main .content .activites .act figure img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 body main .content .activites .act figure .card {
@@ -6437,6 +6489,12 @@ body main .content .activites .act figure .card .more {
   position: absolute;
   top: 50%;
   right: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  body main .content .activites .act figure .card .more {
+    display: none;
+  }
 }
 
 body main .content .activites .act figure .card .more a {
@@ -6491,6 +6549,8 @@ body main .content .activites .act figure .card h3 span {
   font-family: 'Museo';
   font-weight: 500;
   font-size: .8em;
+  position: relative;
+  top: -.4em;
 }
 
 body main .content .activites .act figure .card .city {
