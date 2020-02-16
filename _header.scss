@@ -10,12 +10,23 @@ header{ /* CHECK ! ENFIN !*/
     display: flex;
     flex-direction: column;
     overflow: hidden;
+
+    @include desktop{
+        height: 70vh;
+        background-position-x: 0;
+        background-size: cover;
+        position: relative;
+        overflow: initial;
+    }
     .top{
         nav{
             height: 200px;
             width:100%;
             display: flex;
             justify-content: space-between;
+            @include desktop{
+                align-items: center;
+            }
             .toplogo{
                 margin: 0;
                 span{
@@ -40,6 +51,15 @@ header{ /* CHECK ! ENFIN !*/
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
+                @include desktop{
+                    width: 550px;
+                    height: 100px;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    right: 1.5em;
+                }
+
                 .burger{
                     width: 30px;
                     height: 30px;
@@ -70,6 +90,10 @@ header{ /* CHECK ! ENFIN !*/
                             z-index: 2;
                             overflow: hidden;
                             background: none;
+
+                            @include desktop{
+                                display: none;
+                            }
                         
                             .menu1{
                                 width: 42px;
@@ -105,6 +129,10 @@ header{ /* CHECK ! ENFIN !*/
                         align-items: flex-end;
                         position: absolute;
                         top:50px;
+
+                        @include desktop{
+                            display: none;
+                        }
                         .menu1{
                             width:25px;
                             height: 3px;
@@ -142,19 +170,51 @@ header{ /* CHECK ! ENFIN !*/
                     align-items: flex-end;
                     padding:0 1em 2em 0;
                     transition: .5s ease-in-out;
+
+                    @include desktop{
+                        background: none;
+                        left: 0;
+                        height: 100px;
+                        width: 500px;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        align-items: center;
+                        padding: 0;
+                    }
                     li{
                         list-style: none;
                         margin: .5em 0;
+
+                        @include desktop{
+                            margin: 0;
+                            width: 100%;
+                            border-right: 1px solid $rose;
+                        }
+
                         a{
                             text-decoration: none;
                             text-align: right;
                             @include MontserratBold;
                             font-size: 2rem;
                             color: $bleu2;
+
+                            @include desktop{
+                                color: $rose;
+                                @include Montserrat;
+                                font-size: 1em;
+                                text-align: center;
+                                width: 120px;
+                                display: block;
+                            }
                         }
                     }
                     li:last-of-type{
                         padding-bottom: 2em;
+
+                        @include desktop{
+                            padding-bottom: 0;
+                            border:none;
+                        }
                     }
                 }
                 .recherche{
@@ -162,6 +222,35 @@ header{ /* CHECK ! ENFIN !*/
                     right: -30em;
                     z-index:1;
                     transition: all .5s ease-in-out;
+
+                    @include desktop{
+                        right: 0;
+                        height: 40px;
+                        width: 40px;
+                        display: block;
+
+                        label{
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+
+                            &:after{
+                                content: "\f002";
+                                font-family: 'Font Awesome 5 Free';
+                                font-size: 1.6em;
+                                color: $rose;
+                                display: inline-block;
+                                font-style: normal;
+                                font-variant: normal;
+                                text-rendering: auto;
+                                font-weight: 700;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100%;
+                            }
+                        }
+                    }
                 }
                 .burger:checked ~.navigation{
                     right:0px;
@@ -200,6 +289,11 @@ header{ /* CHECK ! ENFIN !*/
     .title{
         margin-top: auto;
         margin-bottom: 2em;
+
+        @include desktop{
+            width: 30vw;
+            margin: auto auto 4em auto;
+        }
         h2{
             color:$bleu;
             width: 250px;
@@ -209,14 +303,34 @@ header{ /* CHECK ! ENFIN !*/
             flex-direction: column;
             @include MavenPro;
             font-size: 2rem;
+
+            @include desktop{
+                width: 500px;
+                font-size: 5rem;
+                text-align: right;
+            }
             span{
                 order: -1;
                 font-size: 4rem;
                 @include Montserrat;
+
+                @include desktop{
+                    order:0;
+                    font-size: 6rem;
+                    @include MontserratLight;
+                }
             }
         }
         p{
             display:none;
+
+            @include desktop{
+                display: block;
+                text-align: center;
+                color: $grisclair;
+                font-size: 1.3rem;
+                @include MavenPro;
+            }
         }
     }
     .schedule{
@@ -233,6 +347,12 @@ header{ /* CHECK ! ENFIN !*/
         box-shadow: 0px 0px 15px -5px #333;
         @include Montserrat;
         text-transform: uppercase;
-    }
 
+        @include desktop{
+            position: absolute;
+            left: calc(50% - 113px);
+            bottom: -60px;
+            z-index: 999;
+        }
+    }
 }
