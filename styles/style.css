@@ -6548,7 +6548,7 @@ body main .content .activites .reveal figure .card h4 {
 body main .content .activites .reveal figure .card h4 + p {
   display: block;
   position: absolute;
-  top: 380px;
+  top: 400px;
   font-family: 'Montserrat';
   font-weight: 400;
   color: #f8f8f8;
