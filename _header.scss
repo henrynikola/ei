@@ -24,6 +24,8 @@ header{ /* CHECK ! ENFIN !*/
             width:100%;
             display: flex;
             justify-content: space-between;
+
+
             @include desktop{
                 align-items: center;
             }
@@ -168,7 +170,7 @@ header{ /* CHECK ! ENFIN !*/
                     flex-direction: column;
                     justify-content: flex-end;
                     align-items: flex-end;
-                    padding:0 1em 2em 0;
+                    padding:0 1em 5em 0;
                     transition: .5s ease-in-out;
 
                     @include desktop{

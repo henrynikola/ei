@@ -5,13 +5,13 @@ body{
     padding:0;
 
     @include desktop{
-        /*déclarations desktop*/
+        /* exemple de media query pour les déclarations desktop*/
     }
 
-    @import 'header';
-    @import 'main';
-    @import 'footer';
 }
+@import 'header';
+@import 'main';
+@import 'footer';
 
 .hidden{
     display: none;

@@ -14,24 +14,24 @@ Ensuite, sur les éléments qui possèdent la classe .reveal, ajouter un écoute
 
 */
 
-document.addEventListener("click", ev => {
-    if (ev.target.classList.contains("card") || ev.target.classList.contains("city") || ev.target.classList.contains("lieu")) {
-        let reveler = ev.target.closest(".act");
-        reveler.classList.toggle("reveal");
+document.addEventListener("click", ev => { //écouteur d'événement click
+    if (ev.target.classList.contains("card") || ev.target.classList.contains("city") || ev.target.classList.contains("lieu")) { //capter le click sur ces éléments
+        let reveler = ev.target.closest(".act"); //en fait j'agis sur ma classe .act (qui est ma li)
+        reveler.classList.toggle("reveal"); //je toggle la classe reveal
 
-        if (reveler.classList.contains("reveal")){
-            let centre = document.querySelector(".reveal h4")
-            if (centre.classList.contains("centerCity")){
-                let couleur = reveler.querySelector(".city")
-                couleur.classList.add("centerCity")
+        if (reveler.classList.contains("reveal")){ //si mon contenu est révélé
+            let centre = document.querySelector(".reveal h4") //ça c'est le titre qui a la couleur (centre/exterieur city)
+            if (centre.classList.contains("centerCity")){ //si le titre a la classe centerCity
+                let couleur = reveler.querySelector(".city") //je récupère le sous-titre qui doit changer de couleur
+                couleur.classList.add("centerCity") //et je lui applique la couleur correspondante
             }else if (centre.classList.contains("outCity")){
                 let couleur = reveler.querySelector(".city")
                 couleur.classList.add("outCity")
             }
-        } else if (!reveler.classList.contains("reveal")){
-            let couleur = reveler.querySelector(".city")
-            couleur.classList.remove("centerCity")
-            couleur.classList.remove("outCity")
+        } else if (!reveler.classList.contains("reveal")){ // si l'activité ne contient pas la classe reveal (n'est pas révélée)
+            let couleur = reveler.querySelector(".city") // je récupère le sous titre qui possède la couleur par défaut
+            couleur.classList.remove("centerCity") //je retire la couleur
+            couleur.classList.remove("outCity") //je retire la couleur
         }
     };
 });

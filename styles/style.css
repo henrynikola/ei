@@ -6005,7 +6005,7 @@ body {
 
 @media screen and (min-width: 768px) {
   body {
-    /*déclarations desktop*/
+    /* exemple de media query pour les déclarations desktop*/
   }
 }
 
@@ -6744,10 +6744,23 @@ body main .content .activites .reveal:before {
   background-color: #284e68;
 }
 
+@media screen and (min-width: 768px) {
+  body main .content .activites .reveal:before {
+    display: none;
+  }
+}
+
 body main .content .activites .reveal figure {
   height: 600px;
   position: relative;
   padding: 0 2em;
+}
+
+@media screen and (min-width: 768px) {
+  body main .content .activites .reveal figure {
+    height: 100%;
+    padding: 0;
+  }
 }
 
 body main .content .activites .reveal figure img {
@@ -6758,6 +6771,15 @@ body main .content .activites .reveal figure img {
   height: 220px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  body main .content .activites .reveal figure img {
+    position: unset;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 body main .content .activites .reveal figure .card {
