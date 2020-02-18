@@ -6756,6 +6756,7 @@ main .content .activites .reveal figure {
   max-height: 400px;
   position: relative;
   padding: 0 2em;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
