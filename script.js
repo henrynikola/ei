@@ -54,14 +54,19 @@ document.addEventListener("mouseover", ev => {
     let hover = ev.target.parentNode
     let survol = hover.parentNode
 
-    if(survol.classList.contains("act")){
-        console.log(survol)
+    console.log(ev.target)
+
+
+    if(survol.classList.contains("act") || ev.target.classList.contains("lieu") || ev.target.classList.contains("city")){
+        //console.log(survol)
         survol.classList.add("reveal")
+        myHover.classList.add("reveal")
     };
 });
 
-
+console.log(myHover)
 myHover.forEach(element => {
+
     element.addEventListener("mouseout", ev => {
         let hover = ev.target.parentNode
         let survol = hover.parentNode
