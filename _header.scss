@@ -31,6 +31,7 @@ header{ /* CHECK ! ENFIN !*/
             }
             .toplogo{
                 margin: 0;
+                z-index: 5;
                 span{
                     display: none;
                 }
@@ -160,7 +161,7 @@ header{ /* CHECK ! ENFIN !*/
 
                 .navigation{
                     position: absolute;
-                    right: -30em;
+                    right: 120em;
                     z-index:1;
                     height: 100vh;
                     width: 100vw;
@@ -221,7 +222,7 @@ header{ /* CHECK ! ENFIN !*/
                 }
                 .recherche{
                     position: absolute;
-                    right: -30em;
+                    right: 120em;
                     z-index:1;
                     transition: all .5s ease-in-out;
 

@@ -46,3 +46,28 @@ Une fois que l'activité est révélée, détecter s'il y a une classe ".centerC
 ...Bon, on dirait bien que ça fonctionne. Je suis pas convaincu que ce soit le code le plus propre ou le plus efficace qui soit, mais au moins ça fonctionne comme je veux, et j'ai fait ça tout seul, donc je suis content !
 */
 
+
+let myHover = document.querySelectorAll(".act")
+
+document.addEventListener("mouseover", ev => {
+    //console.log(ev.target.parentNode) //ça survole les balises Figure
+    let hover = ev.target.parentNode
+    let survol = hover.parentNode
+
+    if(survol.classList.contains("act")){
+        console.log(survol)
+        survol.classList.add("reveal")
+    };
+});
+
+
+myHover.forEach(element => {
+    element.addEventListener("mouseout", ev => {
+        let hover = ev.target.parentNode
+        let survol = hover.parentNode
+
+        if(survol.classList.contains("reveal")){
+            survol.classList.remove("reveal")
+        }
+    })
+});

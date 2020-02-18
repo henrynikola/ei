@@ -98,6 +98,7 @@ main{
 
                             @include desktop{
                                 display: none;
+                                bottom: 1em;
                             }
                             
                             a{
@@ -161,7 +162,6 @@ main{
             /*Sur desktop, ajouter la classe .reveal aux li qui sont survolés (hover)*/
             /*A priori, la classe se retire quand on ne survole plus (à vérifier)*/
             .reveal{
-
                 &:before{
                     background-color: $bleu2;
 
@@ -171,7 +171,7 @@ main{
                 }
 
                 figure{
-                    height: 600px;
+                    max-height: 400px;
                     position: relative;
                     padding: 0 2em;
 
@@ -199,6 +199,8 @@ main{
                     .card{
                         background:none;
                         padding-left: 0;
+                        height: 100%;
+                        justify-content: flex-start;
                         //globalement c'est le bordel là dedans
 
                         @include desktop{
@@ -214,11 +216,12 @@ main{
 
                         .lieu{
                             color: $gris;
+                            margin-top: .5em;
 
                             @include desktop{
                                 color: white;
-                                padding: 0 1em;
-                                padding-top: 1em;
+                                padding: 0 1rem;
+
                             }
                         }
                         
@@ -254,16 +257,24 @@ main{
                             }
                         }
 
-                        .more{ //le plus gros bordel
+                        .more{ //le plus gros bordel c'est içi
                             width: 100%;
-                            height: 500%;
+                            height: 50px;
                             left: 0;
                             display: flex;
                             justify-content: space-between;
                             align-items: flex-end;
+                            top: 85%;
+                            bottom: 1em;
 
                             @include desktop{
                                 height: 50px;
+                                padding: 0 1em;
+                                width: 90%;
+                                top: 80%;
+                                bottom: 1em;
+                                justify-content: flex-start;
+                                align-items: flex-start;
                             }
 
                             a{
@@ -272,23 +283,50 @@ main{
                                 text-decoration: none;
                                 width: 50%;
                                 @include Montserrat;
+
+                                @include desktop{
+                                    width: 30px;
+                                }
                             }
 
                             a:last-of-type{
                                 text-align:center;
                                 border-left: 1px solid $gris;
+
+                                @include desktop{
+                                    width: 100px;
+                                }
                             }
 
                             .troispoints{
                                 position: absolute;
                                 right:0;
-                                top:-.5em;
+                                top:-29em;
                                 flex-direction: column;
                                 height: 15px;
                                 width: 10px;
 
+                                @include desktop{
+                                    position: unset;
+                                    flex-direction: row;
+                                    height: 10px;
+                                    width: 25px;
+                                    margin-left: auto;
+                                    margin-top: auto;
+                                }
+
+                                span{
+                                    @include desktop{
+                                        background-color: #fff;
+                                    }
+                                }
+
                                 span:last-of-type{
                                     display: none;
+
+                                    @include desktop{
+                                        display: unset;
+                                    }
                                 }
                             }
                         }
