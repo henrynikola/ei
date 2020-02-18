@@ -7,8 +7,8 @@ body{
     @include desktop{
         /* exemple de media query pour les déclarations desktop*/
     }
-
 }
+
 @import 'header';
 @import 'main';
 @import 'footer';

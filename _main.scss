@@ -199,14 +199,27 @@ main{
                     .card{
                         background:none;
                         padding-left: 0;
+                        //globalement c'est le bordel là dedans
 
                         @include desktop{
-                            background-color: red;
-                            font-size: 10px;
+                            height: 100%;
+                            width: 100%;
+                            position: absolute;
+                            top: 0;
+                            background-color: $bleu2;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: start;
                         }
 
-                        h3{
+                        .lieu{
                             color: $gris;
+
+                            @include desktop{
+                                color: white;
+                                padding: 0 1em;
+                                padding-top: 1em;
+                            }
                         }
                         
                         h4{
@@ -214,6 +227,11 @@ main{
                             position: absolute;
                             top: 330px;
                             @include MontserratBold;
+
+                            @include desktop{
+                                position: unset;
+                                padding: 0 1em;
+                            }
                         }
 
                         h4+p{
@@ -222,14 +240,31 @@ main{
                             top: 400px;
                             @include Montserrat;
                             color: $gris;
+
+                            @include desktop{
+                                position: unset;
+                                color: white;
+                                padding: 0 1em;
+                            }
                         }
-                        .more{
+
+                        .city{
+                            @include desktop{
+                                display: none;
+                            }
+                        }
+
+                        .more{ //le plus gros bordel
                             width: 100%;
                             height: 500%;
                             left: 0;
                             display: flex;
                             justify-content: space-between;
                             align-items: flex-end;
+
+                            @include desktop{
+                                height: 50px;
+                            }
 
                             a{
                                 display: block;

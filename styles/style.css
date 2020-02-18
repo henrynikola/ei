@@ -6009,7 +6009,7 @@ body {
   }
 }
 
-body header {
+header {
   /* CHECK ! ENFIN !*/
   height: 100vh;
   width: 100%;
@@ -6031,7 +6031,7 @@ body header {
 }
 
 @media screen and (min-width: 768px) {
-  body header {
+  header {
     height: 70vh;
     background-position-x: 0;
     background-size: cover;
@@ -6040,7 +6040,7 @@ body header {
   }
 }
 
-body header .top nav {
+header .top nav {
   height: 200px;
   width: 100%;
   display: -webkit-box;
@@ -6052,36 +6052,36 @@ body header .top nav {
 }
 
 @media screen and (min-width: 768px) {
-  body header .top nav {
+  header .top nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
 }
 
-body header .top nav .toplogo {
+header .top nav .toplogo {
   margin: 0;
 }
 
-body header .top nav .toplogo span {
+header .top nav .toplogo span {
   display: none;
 }
 
-body header .top nav .toplogo a {
+header .top nav .toplogo a {
   width: 200px;
   height: 136px;
   display: inline-block;
   margin: 1em 0 0 1.5em;
 }
 
-body header .top nav .toplogo a img {
+header .top nav .toplogo a img {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
 
-body header .top nav .navbar {
+header .top nav .navbar {
   width: 100px;
   position: relative;
   display: -webkit-box;
@@ -6097,7 +6097,7 @@ body header .top nav .navbar {
 }
 
 @media screen and (min-width: 768px) {
-  body header .top nav .navbar {
+  header .top nav .navbar {
     width: 550px;
     height: 100px;
     -webkit-box-orient: horizontal;
@@ -6111,7 +6111,7 @@ body header .top nav .navbar {
   }
 }
 
-body header .top nav .navbar .burger {
+header .top nav .navbar .burger {
   width: 30px;
   height: 30px;
   margin-top: 50px;
@@ -6135,16 +6135,16 @@ body header .top nav .navbar .burger {
 }
 
 @media screen and (min-width: 768px) {
-  body header .top nav .navbar .burger {
+  header .top nav .navbar .burger {
     display: none;
   }
 }
 
-body header .top nav .navbar .burger:checked {
+header .top nav .navbar .burger:checked {
   position: fixed;
 }
 
-body header .top nav .navbar .burger:checked ~ .burgermenu {
+header .top nav .navbar .burger:checked ~ .burgermenu {
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6162,12 +6162,12 @@ body header .top nav .navbar .burger:checked ~ .burgermenu {
 }
 
 @media screen and (min-width: 768px) {
-  body header .top nav .navbar .burger:checked ~ .burgermenu {
+  header .top nav .navbar .burger:checked ~ .burgermenu {
     display: none;
   }
 }
 
-body header .top nav .navbar .burger:checked ~ .burgermenu .menu1 {
+header .top nav .navbar .burger:checked ~ .burgermenu .menu1 {
   width: 42px;
   -webkit-transform: translateY(-14px) rotate(-45deg);
           transform: translateY(-14px) rotate(-45deg);
@@ -6179,12 +6179,12 @@ body header .top nav .navbar .burger:checked ~ .burgermenu .menu1 {
   z-index: 3;
 }
 
-body header .top nav .navbar .burger:checked ~ .burgermenu .menu2 {
+header .top nav .navbar .burger:checked ~ .burgermenu .menu2 {
   display: none;
   z-index: 3;
 }
 
-body header .top nav .navbar .burger:checked ~ .burgermenu .menu3 {
+header .top nav .navbar .burger:checked ~ .burgermenu .menu3 {
   width: 42px;
   -webkit-transform: translateY(14px) rotate(45deg);
           transform: translateY(14px) rotate(45deg);
@@ -6196,7 +6196,7 @@ body header .top nav .navbar .burger:checked ~ .burgermenu .menu3 {
   z-index: 3;
 }
 
-body header .top nav .navbar .burgermenu {
+header .top nav .navbar .burgermenu {
   width: 30px;
   height: 30px;
   display: -webkit-box;
@@ -6217,12 +6217,12 @@ body header .top nav .navbar .burgermenu {
 }
 
 @media screen and (min-width: 768px) {
-  body header .top nav .navbar .burgermenu {
+  header .top nav .navbar .burgermenu {
     display: none;
   }
 }
 
-body header .top nav .navbar .burgermenu .menu1 {
+header .top nav .navbar .burgermenu .menu1 {
   width: 25px;
   height: 3px;
   display: block;
@@ -6231,7 +6231,7 @@ body header .top nav .navbar .burgermenu .menu1 {
   transition: .5s ease-in-out;
 }
 
-body header .top nav .navbar .burgermenu .menu2 {
+header .top nav .navbar .burgermenu .menu2 {
   display: block;
   background-color: #00d8ff;
   height: 3px;
@@ -6240,7 +6240,7 @@ body header .top nav .navbar .burgermenu .menu2 {
   transition: .5s ease-in-out;
 }
 
-body header .top nav .navbar .burgermenu .menu3 {
+header .top nav .navbar .burgermenu .menu3 {
   width: 15px;
   height: 3px;
   display: block;
@@ -6249,7 +6249,7 @@ body header .top nav .navbar .burgermenu .menu3 {
   transition: .5s ease-in-out;
 }
 
-body header .top nav .navbar .navigation {
+header .top nav .navbar .navigation {
   position: absolute;
   right: -30em;
   z-index: 1;
@@ -6270,13 +6270,13 @@ body header .top nav .navbar .navigation {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 0 1em 2em 0;
+  padding: 0 1em 5em 0;
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
-  body header .top nav .navbar .navigation {
+  header .top nav .navbar .navigation {
     background: none;
     left: 0;
     height: 100px;
@@ -6294,20 +6294,20 @@ body header .top nav .navbar .navigation {
   }
 }
 
-body header .top nav .navbar .navigation li {
+header .top nav .navbar .navigation li {
   list-style: none;
   margin: .5em 0;
 }
 
 @media screen and (min-width: 768px) {
-  body header .top nav .navbar .navigation li {
+  header .top nav .navbar .navigation li {
     margin: 0;
     width: 100%;
     border-right: 1px solid #f297b1;
   }
 }
 
-body header .top nav .navbar .navigation li a {
+header .top nav .navbar .navigation li a {
   text-decoration: none;
   text-align: right;
   font-family: 'MontserratBold';
@@ -6317,7 +6317,7 @@ body header .top nav .navbar .navigation li a {
 }
 
 @media screen and (min-width: 768px) {
-  body header .top nav .navbar .navigation li a {
+  header .top nav .navbar .navigation li a {
     color: #f297b1;
     font-family: 'Montserrat';
     font-weight: 400;
@@ -6328,18 +6328,18 @@ body header .top nav .navbar .navigation li a {
   }
 }
 
-body header .top nav .navbar .navigation li:last-of-type {
+header .top nav .navbar .navigation li:last-of-type {
   padding-bottom: 2em;
 }
 
 @media screen and (min-width: 768px) {
-  body header .top nav .navbar .navigation li:last-of-type {
+  header .top nav .navbar .navigation li:last-of-type {
     padding-bottom: 0;
     border: none;
   }
 }
 
-body header .top nav .navbar .recherche {
+header .top nav .navbar .recherche {
   position: absolute;
   right: -30em;
   z-index: 1;
@@ -6348,18 +6348,18 @@ body header .top nav .navbar .recherche {
 }
 
 @media screen and (min-width: 768px) {
-  body header .top nav .navbar .recherche {
+  header .top nav .navbar .recherche {
     right: 0;
     height: 40px;
     width: 40px;
     display: block;
   }
-  body header .top nav .navbar .recherche label {
+  header .top nav .navbar .recherche label {
     width: 100%;
     height: 100%;
     display: block;
   }
-  body header .top nav .navbar .recherche label:after {
+  header .top nav .navbar .recherche label:after {
     content: "\f002";
     font-family: 'Font Awesome 5 Free';
     font-size: 1.6em;
@@ -6382,12 +6382,12 @@ body header .top nav .navbar .recherche {
   }
 }
 
-body header .top nav .navbar .burger:checked ~ .navigation {
+header .top nav .navbar .burger:checked ~ .navigation {
   right: 0px;
   position: fixed;
 }
 
-body header .top nav .navbar .burger:checked ~ .recherche {
+header .top nav .navbar .burger:checked ~ .recherche {
   position: fixed;
   height: 30px;
   width: 30px;
@@ -6395,7 +6395,7 @@ body header .top nav .navbar .burger:checked ~ .recherche {
   right: 1em;
 }
 
-body header .top nav .navbar .burger:checked ~ .recherche label {
+header .top nav .navbar .burger:checked ~ .recherche label {
   width: 100%;
   height: 100%;
   display: block;
@@ -6404,7 +6404,7 @@ body header .top nav .navbar .burger:checked ~ .recherche label {
                         background-size: cover;*/
 }
 
-body header .top nav .navbar .burger:checked ~ .recherche label:after {
+header .top nav .navbar .burger:checked ~ .recherche label:after {
   content: "\f002";
   font-family: 'Font Awesome 5 Free';
   font-size: 1.6em;
@@ -6416,19 +6416,19 @@ body header .top nav .navbar .burger:checked ~ .recherche label:after {
   font-weight: 700;
 }
 
-body header .title {
+header .title {
   margin-top: auto;
   margin-bottom: 2em;
 }
 
 @media screen and (min-width: 768px) {
-  body header .title {
+  header .title {
     width: 30vw;
     margin: auto auto 4em auto;
   }
 }
 
-body header .title h2 {
+header .title h2 {
   color: #00d8ff;
   width: 250px;
   margin: 0;
@@ -6446,14 +6446,14 @@ body header .title h2 {
 }
 
 @media screen and (min-width: 768px) {
-  body header .title h2 {
+  header .title h2 {
     width: 500px;
     font-size: 5rem;
     text-align: right;
   }
 }
 
-body header .title h2 span {
+header .title h2 span {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
@@ -6463,7 +6463,7 @@ body header .title h2 span {
 }
 
 @media screen and (min-width: 768px) {
-  body header .title h2 span {
+  header .title h2 span {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -6473,12 +6473,12 @@ body header .title h2 span {
   }
 }
 
-body header .title p {
+header .title p {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  body header .title p {
+  header .title p {
     display: block;
     text-align: center;
     color: #d6d6d6;
@@ -6488,7 +6488,7 @@ body header .title p {
   }
 }
 
-body header .schedule {
+header .schedule {
   color: #fff;
   text-decoration: none;
   text-align: center;
@@ -6507,7 +6507,7 @@ body header .schedule {
 }
 
 @media screen and (min-width: 768px) {
-  body header .schedule {
+  header .schedule {
     position: absolute;
     left: calc(50% - 113px);
     bottom: -60px;
@@ -6515,7 +6515,7 @@ body header .schedule {
   }
 }
 
-body main {
+main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6531,19 +6531,19 @@ body main {
           align-items: center;
 }
 
-body main .content {
+main .content {
   width: 100%;
   margin: 3em 0;
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
-  body main .content {
+  main .content {
     width: 70vw;
   }
 }
 
-body main .content h2 {
+main .content h2 {
   text-align: center;
   font-family: 'MontserratBold';
   font-weight: 700;
@@ -6551,12 +6551,12 @@ body main .content h2 {
 }
 
 @media screen and (min-width: 768px) {
-  body main .content h2 {
+  main .content h2 {
     text-align: left;
   }
 }
 
-body main .content .activites {
+main .content .activites {
   padding: 0;
   list-style: none;
   /*En js, prévoir un script qui ajoute dynamiquement la classe .reveal 
@@ -6566,7 +6566,7 @@ body main .content .activites {
 }
 
 @media screen and (min-width: 768px) {
-  body main .content .activites {
+  main .content .activites {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[4];
@@ -6577,19 +6577,19 @@ body main .content .activites {
   }
 }
 
-body main .content .activites .act {
+main .content .activites .act {
   display: block;
   margin-bottom: 1em;
   position: relative;
 }
 
 @media screen and (min-width: 768px) {
-  body main .content .activites .act {
+  main .content .activites .act {
     margin: 0;
   }
 }
 
-body main .content .activites .act:before {
+main .content .activites .act:before {
   content: '\00a0';
   display: block;
   width: 1px;
@@ -6600,29 +6600,29 @@ body main .content .activites .act:before {
 }
 
 @media screen and (min-width: 768px) {
-  body main .content .activites .act:before {
+  main .content .activites .act:before {
     display: none;
   }
 }
 
-body main .content .activites .act figure {
+main .content .activites .act figure {
   margin: 0;
   margin-left: 2em;
   background-color: #284e68;
 }
 
 @media screen and (min-width: 768px) {
-  body main .content .activites .act figure {
+  main .content .activites .act figure {
     margin-left: 0;
   }
 }
 
-body main .content .activites .act figure img {
+main .content .activites .act figure img {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  body main .content .activites .act figure img {
+  main .content .activites .act figure img {
     display: block;
     width: 100%;
     height: 300px;
@@ -6631,7 +6631,7 @@ body main .content .activites .act figure img {
   }
 }
 
-body main .content .activites .act figure .card {
+main .content .activites .act figure .card {
   background-color: #f8f8f8;
   padding-left: 2em;
   height: 100px;
@@ -6650,11 +6650,11 @@ body main .content .activites .act figure .card {
       align-self: flex-start;
 }
 
-body main .content .activites .act figure .card h4, body main .content .activites .act figure .card h4 + p {
+main .content .activites .act figure .card h4, main .content .activites .act figure .card h4 + p {
   display: none;
 }
 
-body main .content .activites .act figure .card .more {
+main .content .activites .act figure .card .more {
   width: 30px;
   height: 10px;
   display: block;
@@ -6664,16 +6664,16 @@ body main .content .activites .act figure .card .more {
 }
 
 @media screen and (min-width: 768px) {
-  body main .content .activites .act figure .card .more {
+  main .content .activites .act figure .card .more {
     display: none;
   }
 }
 
-body main .content .activites .act figure .card .more a {
+main .content .activites .act figure .card .more a {
   display: none;
 }
 
-body main .content .activites .act figure .card .more .troispoints {
+main .content .activites .act figure .card .more .troispoints {
   width: 25px;
   height: 10px;
   display: -webkit-box;
@@ -6688,7 +6688,7 @@ body main .content .activites .act figure .card .more .troispoints {
   margin: 0;
 }
 
-body main .content .activites .act figure .card .more .troispoints span {
+main .content .activites .act figure .card .more .troispoints span {
   display: block;
   width: 5px;
   height: 5px;
@@ -6696,11 +6696,11 @@ body main .content .activites .act figure .card .more .troispoints span {
   border-radius: 5px;
 }
 
-body main .content .activites .act figure .card h3, body main .content .activites .act figure .card p {
+main .content .activites .act figure .card h3, main .content .activites .act figure .card p {
   margin: 0;
 }
 
-body main .content .activites .act figure .card h3 {
+main .content .activites .act figure .card h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6717,7 +6717,7 @@ body main .content .activites .act figure .card h3 {
   font-size: 1.5em;
 }
 
-body main .content .activites .act figure .card h3 span {
+main .content .activites .act figure .card h3 span {
   font-family: 'Museo';
   font-weight: 500;
   font-size: .8em;
@@ -6725,45 +6725,45 @@ body main .content .activites .act figure .card h3 span {
   top: -.4em;
 }
 
-body main .content .activites .act figure .card .city {
+main .content .activites .act figure .card .city {
   font-family: 'Montserrat';
   font-weight: 400;
   color: #00d8ff;
   margin-top: .3em;
 }
 
-body main .content .activites .act figure .card .centerCity {
+main .content .activites .act figure .card .centerCity {
   color: #d4ce9a;
 }
 
-body main .content .activites .act figure .card .outCity {
+main .content .activites .act figure .card .outCity {
   color: #f899b4;
 }
 
-body main .content .activites .reveal:before {
+main .content .activites .reveal:before {
   background-color: #284e68;
 }
 
 @media screen and (min-width: 768px) {
-  body main .content .activites .reveal:before {
+  main .content .activites .reveal:before {
     display: none;
   }
 }
 
-body main .content .activites .reveal figure {
+main .content .activites .reveal figure {
   height: 600px;
   position: relative;
   padding: 0 2em;
 }
 
 @media screen and (min-width: 768px) {
-  body main .content .activites .reveal figure {
+  main .content .activites .reveal figure {
     height: 100%;
     padding: 0;
   }
 }
 
-body main .content .activites .reveal figure img {
+main .content .activites .reveal figure img {
   display: block;
   position: absolute;
   top: 110px;
@@ -6774,7 +6774,7 @@ body main .content .activites .reveal figure img {
 }
 
 @media screen and (min-width: 768px) {
-  body main .content .activites .reveal figure img {
+  main .content .activites .reveal figure img {
     position: unset;
     top: 0;
     width: 100%;
@@ -6782,16 +6782,44 @@ body main .content .activites .reveal figure img {
   }
 }
 
-body main .content .activites .reveal figure .card {
+main .content .activites .reveal figure .card {
   background: none;
   padding-left: 0;
 }
 
-body main .content .activites .reveal figure .card h3 {
+@media screen and (min-width: 768px) {
+  main .content .activites .reveal figure .card {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #284e68;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+main .content .activites .reveal figure .card .lieu {
   color: #f8f8f8;
 }
 
-body main .content .activites .reveal figure .card h4 {
+@media screen and (min-width: 768px) {
+  main .content .activites .reveal figure .card .lieu {
+    color: white;
+    padding: 0 1em;
+    padding-top: 1em;
+  }
+}
+
+main .content .activites .reveal figure .card h4 {
   display: block;
   position: absolute;
   top: 330px;
@@ -6799,7 +6827,14 @@ body main .content .activites .reveal figure .card h4 {
   font-weight: 700;
 }
 
-body main .content .activites .reveal figure .card h4 + p {
+@media screen and (min-width: 768px) {
+  main .content .activites .reveal figure .card h4 {
+    position: unset;
+    padding: 0 1em;
+  }
+}
+
+main .content .activites .reveal figure .card h4 + p {
   display: block;
   position: absolute;
   top: 400px;
@@ -6808,7 +6843,21 @@ body main .content .activites .reveal figure .card h4 + p {
   color: #f8f8f8;
 }
 
-body main .content .activites .reveal figure .card .more {
+@media screen and (min-width: 768px) {
+  main .content .activites .reveal figure .card h4 + p {
+    position: unset;
+    color: white;
+    padding: 0 1em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main .content .activites .reveal figure .card .city {
+    display: none;
+  }
+}
+
+main .content .activites .reveal figure .card .more {
   width: 100%;
   height: 500%;
   left: 0;
@@ -6823,7 +6872,13 @@ body main .content .activites .reveal figure .card .more {
           align-items: flex-end;
 }
 
-body main .content .activites .reveal figure .card .more a {
+@media screen and (min-width: 768px) {
+  main .content .activites .reveal figure .card .more {
+    height: 50px;
+  }
+}
+
+main .content .activites .reveal figure .card .more a {
   display: block;
   color: white;
   text-decoration: none;
@@ -6832,12 +6887,12 @@ body main .content .activites .reveal figure .card .more a {
   font-weight: 400;
 }
 
-body main .content .activites .reveal figure .card .more a:last-of-type {
+main .content .activites .reveal figure .card .more a:last-of-type {
   text-align: center;
   border-left: 1px solid #f8f8f8;
 }
 
-body main .content .activites .reveal figure .card .more .troispoints {
+main .content .activites .reveal figure .card .more .troispoints {
   position: absolute;
   right: 0;
   top: -.5em;
@@ -6849,11 +6904,11 @@ body main .content .activites .reveal figure .card .more .troispoints {
   width: 10px;
 }
 
-body main .content .activites .reveal figure .card .more .troispoints span:last-of-type {
+main .content .activites .reveal figure .card .more .troispoints span:last-of-type {
   display: none;
 }
 
-body main .getticket {
+main .getticket {
   width: 70%;
   height: 90px;
   margin: 0 auto;
@@ -6866,13 +6921,13 @@ body main .getticket {
 }
 
 @media screen and (min-width: 768px) {
-  body main .getticket {
+  main .getticket {
     width: 15em;
     left: 0;
   }
 }
 
-body main .getticket a {
+main .getticket a {
   width: 100%;
   height: 50px;
   line-height: 50px;
@@ -6886,7 +6941,7 @@ body main .getticket a {
   text-transform: uppercase;
 }
 
-body main .getticket .payinfos {
+main .getticket .payinfos {
   width: 100%;
   height: 40px;
   display: -webkit-box;
@@ -6897,13 +6952,13 @@ body main .getticket .payinfos {
           justify-content: flex-start;
 }
 
-body main .getticket .payinfos img {
+main .getticket .payinfos img {
   width: 25px;
   height: auto;
   margin: 0 .5em;
 }
 
-body main .getticket .payinfos p {
+main .getticket .payinfos p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6918,13 +6973,13 @@ body main .getticket .payinfos p {
   text-transform: uppercase;
 }
 
-body main .getticket .payinfos p span {
+main .getticket .payinfos p span {
   color: #00d8ff;
   font-family: 'Montserrat';
   font-weight: 400;
 }
 
-body footer {
+footer {
   background: url("../img/brent-cox-mid.jpg");
   background-color: rgba(40, 78, 104, 0.5);
   background-size: cover;
@@ -6935,12 +6990,12 @@ body footer {
 }
 
 @media screen and (min-width: 768px) {
-  body footer {
+  footer {
     padding-bottom: 3em;
   }
 }
 
-body footer section {
+footer section {
   width: 80%;
   margin: 0 auto;
   position: relative;
@@ -6948,18 +7003,18 @@ body footer section {
 }
 
 @media screen and (min-width: 768px) {
-  body footer section {
+  footer section {
     left: 0;
     width: 70vw;
   }
 }
 
-body footer .infos {
+footer .infos {
   padding-top: 6em;
 }
 
 @media screen and (min-width: 768px) {
-  body footer .infos {
+  footer .infos {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6969,12 +7024,12 @@ body footer .infos {
   }
 }
 
-body footer .infos img {
+footer .infos img {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  body footer .infos img {
+  footer .infos img {
     display: block;
     width: 45%;
     height: 250px;
@@ -6986,12 +7041,12 @@ body footer .infos img {
 }
 
 @media screen and (min-width: 768px) {
-  body footer .infos .tourism {
+  footer .infos .tourism {
     width: 45%;
   }
 }
 
-body footer .infos .tourism div {
+footer .infos .tourism div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7006,7 +7061,7 @@ body footer .infos .tourism div {
 }
 
 @media screen and (min-width: 768px) {
-  body footer .infos .tourism div {
+  footer .infos .tourism div {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -7018,7 +7073,7 @@ body footer .infos .tourism div {
   }
 }
 
-body footer .infos .tourism div h3 {
+footer .infos .tourism div h3 {
   margin: 0;
   color: white;
   font-family: 'MontserratBold';
@@ -7026,12 +7081,12 @@ body footer .infos .tourism div h3 {
 }
 
 @media screen and (min-width: 768px) {
-  body footer .infos .tourism div h3 {
+  footer .infos .tourism div h3 {
     font-size: 1.5em;
   }
 }
 
-body footer .infos .tourism div img {
+footer .infos .tourism div img {
   display: block;
   width: 20px;
   height: auto;
@@ -7041,14 +7096,14 @@ body footer .infos .tourism div img {
 }
 
 @media screen and (min-width: 768px) {
-  body footer .infos .tourism div img {
+  footer .infos .tourism div img {
     margin-right: 8em;
     margin-left: auto;
     width: 25px;
   }
 }
 
-body footer .infos .tourism p {
+footer .infos .tourism p {
   color: white;
   font-family: 'Montserrat';
   font-weight: 400;
@@ -7056,12 +7111,12 @@ body footer .infos .tourism p {
 }
 
 @media screen and (min-width: 768px) {
-  body footer .infos .tourism p {
+  footer .infos .tourism p {
     font-size: 1em;
   }
 }
 
-body footer .infos .tourism p:first-of-type {
+footer .infos .tourism p:first-of-type {
   font-family: 'MuseoBold';
   font-weight: 700;
   margin-bottom: 0;
@@ -7069,12 +7124,12 @@ body footer .infos .tourism p:first-of-type {
 }
 
 @media screen and (min-width: 768px) {
-  body footer .infos .tourism p:first-of-type {
+  footer .infos .tourism p:first-of-type {
     font-size: 1.2em;
   }
 }
 
-body footer .bottom {
+footer .bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7090,7 +7145,7 @@ body footer .bottom {
 }
 
 @media screen and (min-width: 768px) {
-  body footer .bottom {
+  footer .bottom {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -7101,7 +7156,7 @@ body footer .bottom {
   }
 }
 
-body footer .bottom .visit {
+footer .bottom .visit {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
@@ -7113,7 +7168,7 @@ body footer .bottom .visit {
 }
 
 @media screen and (min-width: 768px) {
-  body footer .bottom .visit {
+  footer .bottom .visit {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
@@ -7123,15 +7178,15 @@ body footer .bottom .visit {
   }
 }
 
-body footer .bottom .visit h4, body footer .bottom .visit p {
+footer .bottom .visit h4, footer .bottom .visit p {
   margin: 0;
 }
 
-body footer .bottom .visit h4 {
+footer .bottom .visit h4 {
   font-size: .8em;
 }
 
-body footer .bottom img {
+footer .bottom img {
   width: 60%;
   margin: 0 auto;
   margin-top: 2em;
@@ -7140,7 +7195,7 @@ body footer .bottom img {
 }
 
 @media screen and (min-width: 768px) {
-  body footer .bottom img {
+  footer .bottom img {
     width: 15%;
     height: auto;
     left: 0;
@@ -7149,7 +7204,7 @@ body footer .bottom img {
   }
 }
 
-body footer .bottom .follow {
+footer .bottom .follow {
   background-color: #fff;
   border-radius: 10px;
   margin-top: 2em;
@@ -7158,7 +7213,7 @@ body footer .bottom .follow {
 }
 
 @media screen and (min-width: 768px) {
-  body footer .bottom .follow {
+  footer .bottom .follow {
     width: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7173,12 +7228,12 @@ body footer .bottom .follow {
             align-items: flex-start;
     height: 170px;
   }
-  body footer .bottom .follow div:last-of-type {
+  footer .bottom .follow div:last-of-type {
     margin-right: 2em;
   }
 }
 
-body footer .bottom .follow h3 {
+footer .bottom .follow h3 {
   margin: 0;
   color: #00d8ff;
   font-family: 'MontserratBold';
@@ -7194,12 +7249,12 @@ body footer .bottom .follow h3 {
 }
 
 @media screen and (min-width: 768px) {
-  body footer .bottom .follow h3 {
+  footer .bottom .follow h3 {
     width: 100%;
   }
 }
 
-body footer .bottom .follow div {
+footer .bottom .follow div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7208,7 +7263,7 @@ body footer .bottom .follow div {
           align-items: center;
 }
 
-body footer .bottom .follow div a {
+footer .bottom .follow div a {
   color: #284e68;
   font-size: 2.5em;
   margin: 0 .5em;
@@ -7221,14 +7276,14 @@ body footer .bottom .follow div a {
   text-decoration: none;
 }
 
-body footer .bottom .follow div a img {
+footer .bottom .follow div a img {
   width: 40px;
   height: auto;
   margin: 0;
   position: unset;
 }
 
-body footer .bottom .follow div p {
+footer .bottom .follow div p {
   color: #284e68;
   font-family: 'Montserrat';
   font-weight: 400;
