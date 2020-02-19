@@ -32,11 +32,11 @@
                         <li><a href="#">History</a></li>
                         <li><a href="#">GetTickets</a></li>
                     </ul>
-                    <form action="#" class="recherche">
-                        <label for="searchbar" id="searchlabel">
-                        </label>
-                        <input type="text" id="searchbar" name="search" class="hidden">
-                        <button type="submit" class="hidden"><img src="img/search.svg" alt="Bouton Rechercher"></button>
+                    <div class="trigger fas fa-search"></div> <!--Le trigger va faire apparaitre le formulaire-->
+                    <form action="#" class="recherche active">
+                        <div class="close fas fa-times"></div>
+                        <input type="search" placeholder="Entrez votre recherche" id="searchbar" name="search">
+                        <button type="submit"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
             </nav>

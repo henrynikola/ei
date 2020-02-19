@@ -53,14 +53,16 @@ document.addEventListener("mouseover", ev => {
     //console.log(ev.target.parentNode) //ça survole les balises Figure
     let hover = ev.target.parentNode
     let survol = hover.parentNode
+    let monHover = ev.target.closest(".act")
 
     console.log(ev.target)
+    console.log(monHover)
 
 
     if(survol.classList.contains("act") || ev.target.classList.contains("lieu") || ev.target.classList.contains("city")){
         //console.log(survol)
         survol.classList.add("reveal")
-        myHover.classList.add("reveal")
+        monHover.classList.add("reveal")
     };
 });
 

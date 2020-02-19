@@ -161,6 +161,7 @@ main{
             aux li qui sont "touch"*/
             /*Sur desktop, ajouter la classe .reveal aux li qui sont survolés (hover)*/
             .reveal{
+                
                 &:before{
                     background-color: $bleu2;
 
@@ -170,14 +171,15 @@ main{
                 }
 
                 figure{
-                    max-height: 400px;
                     position: relative;
                     padding: 0 2em;
-                    overflow: hidden;
-
+                    height: 650px;
+                    
                     @include desktop{
+                        max-height: 400px;
                         height: 100%;
                         padding: 0;
+                        overflow: hidden;
                     }
 
                     img{

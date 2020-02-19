@@ -220,7 +220,33 @@ header{ /* CHECK ! ENFIN !*/
                         }
                     }
                 }
+
+                .trigger{
+                    position:absolute;
+                    right: 120em;
+                    top: 55%;
+                    z-index: 1;
+                    transition: all .5s ease-in-out;
+                    color: $bleu2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.6em;
+                    @include desktop{
+                        right: 0;
+                        top: 0;
+                        height: 100px;
+                        width: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $rose;
+                        font-size: 1.2em;
+                    }
+                }
+
                 .recherche{
+                    display: none;
                     position: absolute;
                     right: 120em;
                     z-index:1;
@@ -230,7 +256,7 @@ header{ /* CHECK ! ENFIN !*/
                         right: 0;
                         height: 40px;
                         width: 40px;
-                        display: block;
+                        display: none;
 
                         label{
                             width: 100%;
@@ -260,18 +286,18 @@ header{ /* CHECK ! ENFIN !*/
                     position:fixed;
                 }
                 .burger:checked ~.recherche{
+                    display: none;
                     position:fixed;
                     height: 30px;
                     width: 30px;
                     top: 55%;
                     right: 1em;
-                    label{
-                        width: 100%;
-                        height: 100%;
-                        display: block;
-                        /*background-image: url('../img/search.svg');
-                        background-repeat: no-repeat;
-                        background-size: cover;*/
+                    /*label{
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
 
                         &:after{
                             content: "\f002";
@@ -283,7 +309,72 @@ header{ /* CHECK ! ENFIN !*/
                             font-variant: normal;
                             text-rendering: auto;
                             font-weight: 700;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                         }
+                    }*/
+                }
+                .burger:checked ~.trigger{
+                    position: fixed;
+                    height: 30px;
+                    width: 30px;
+                    top: 55%;
+                    right: 1em;
+                    color: $bleu2;
+                }
+                .rose{
+                    background-color: $rose;
+                }
+                .active{
+                    position:absolute;
+                    right: 120em;
+                    top: 55%;
+                    z-index: 1;
+                    transition: all .5s ease-in-out;
+                }
+                .burger:checked ~.active{
+                    right: 1em;
+                    height: 30px;
+                    min-width: 80vw;
+                    display: flex;
+                    justify-content: flex-start;
+                    background-color: #fff;
+                
+                    button[type=submit]{
+                        height: 30px;
+                        width: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background:none;
+                        border: none;
+                        color: $bleu2;
+                        font-size: 1.6em;
+                        margin-left: auto;
+                        position: absolute;
+                        right: 0;
+                        padding: 0;
+                    }
+                
+                    input[type=search]{
+                        width: 200px;
+                        height: 100%;
+                        padding: 0;
+                        border: none;
+                        @include Montserrat;
+                        color: $bleu2;
+                        outline: none;
+                    }
+                
+                    .close{
+                        height: 30px;
+                        width: 30px;
+                        background-color: none;
+                        color: $bleu2;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
                 }
             }
@@ -359,3 +450,4 @@ header{ /* CHECK ! ENFIN !*/
         }
     }
 }
+
