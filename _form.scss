@@ -1,0 +1,77 @@
+.footer-contact {
+  margin-top: 0;
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 100vh;
+    margin: 0 auto;
+    @include Montserrat;
+    h2,
+    h3,
+    p {
+      color: white;
+      margin: 1vw;
+      padding: 0;
+    }
+    h2 {
+      text-transform: uppercase;
+    }
+    .form-fieldset {
+      margin: 0;
+      padding: 0;
+      border: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      label {
+        width: 80%;
+        color: white;
+        margin-top: 5vw;
+        &::after {
+          content: " *";
+          color: $maincolor;
+        }
+      }
+      .label-min {
+        font-size: 0.8rem;
+        transform: translateY(-2vw);
+        transition: .2s ease;
+      }
+      input {
+        width: 100%;
+        outline: none;
+        background: none;
+        border: none;
+        border-bottom: 1px solid white;
+        color:white;
+      }
+      .input-writted{
+          border-bottom: 1px solid $maincolor;
+      }
+      #textarea-contact {
+        width: 100%;
+        background: none;
+        color:white;
+        border: 1px solid white;
+      }
+      .submit-btn {
+        width: 100%;
+        border-radius: 50px;
+        margin-top: 6vw;
+        padding: 5vw 0;
+        border: solid 1px white;
+        color: white;
+        text-transform: uppercase;
+        &:hover {
+          background-color: white;
+          color: $appearblockcolor;
+        }
+      }
+    }
+  }
+}

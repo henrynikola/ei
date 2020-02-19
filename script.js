@@ -78,3 +78,34 @@ myHover.forEach(element => {
         }
     })
 });
+
+
+let myTrigger = document.querySelector(".trigger")
+let mySearch = document.querySelector(".recherche")
+let myNav = document.querySelector(".navigation")
+let li = myNav.children
+
+myTrigger.addEventListener("click", ev=> {
+    console.log('coucou')
+    myTrigger.classList.add('hidden')
+    mySearch.classList.add('active')
+    myNav.classList.add('rose')
+    
+    //console.log(typeof(li))
+
+    for(let i =0; i< li.length; i++) {
+        li[i].classList.add('hidden')
+    }
+})
+
+let close = mySearch.querySelector(".close")
+
+close.addEventListener("click", ev=>{
+    mySearch.classList.remove('active')
+    myNav.classList.remove('rose')
+    myTrigger.classList.remove('hidden')
+
+    for(let i=0; i<li.length; i++) {
+        li[i].classList.remove('hidden')
+    }
+})
