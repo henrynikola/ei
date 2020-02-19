@@ -1,4 +1,5 @@
-header{ /* CHECK ! ENFIN !*/
+//le header
+header{ 
     height: 100vh;
     width:100%;
     margin:0;
@@ -18,440 +19,101 @@ header{ /* CHECK ! ENFIN !*/
         position: relative;
         overflow: initial;
     }
-    .top{
-        nav{
-            height: 200px;
-            width:100%;
-            display: flex;
-            justify-content: space-between;
+}
 
-
-            @include desktop{
-                align-items: center;
-            }
-            .toplogo{
-                margin: 0;
-                z-index: 5;
-                span{
-                    display: none;
-                }
-                a{
-                    width: 200px;
-                    height: 136px;
-                    display: inline-block;
-                    margin: 1em 0 0 1.5em;
-                    img{
-                        margin:0;
-                        padding:0;
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
-            .navbar{
-                width: 100px;
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                @include desktop{
-                    width: 550px;
-                    height: 100px;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    right: 1.5em;
-                }
-
-                .burger{
-                    width: 30px;
-                    height: 30px;
-                    margin-top: 50px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    background-color: transparent;
-                    background: none;
-                    outline:none;
-                    border:none;
-                    padding:0;
-                    z-index: 3;
-                    opacity: 0;
-
-                    @include desktop{
-                        display:none;
-                    }
-
-                    
-                    &:checked {
-                        position: fixed;
-                        ~.burgermenu{
-                            position: fixed;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            z-index: 2;
-                            overflow: hidden;
-                            background: none;
-
-                            @include desktop{
-                                display: none;
-                            }
-                        
-                            .menu1{
-                                width: 42px;
-                                transform: translateY(-14px) rotate(-45deg) ;
-                                transform-origin: top right;
-                                position: relative;
-                                top:0;
-                                background-color: $bleu2;
-                                z-index: 3;
-                            }
-                            .menu2{
-                                display: none;
-                                z-index: 3;
-                            }
-                            .menu3{
-                                width: 42px;
-                                transform: translateY(14px) rotate(45deg) ;
-                                transform-origin: bottom right;
-                                position: relative;
-                                bottom: 0px;
-                                background-color: $bleu2;
-                                z-index: 3;
-                            }
-                        }
-                    }  
-                }
-                .burgermenu{
-                        width: 30px;
-                        height: 30px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        align-items: flex-end;
-                        position: absolute;
-                        top:50px;
-
-                        @include desktop{
-                            display: none;
-                        }
-                        .menu1{
-                            width:25px;
-                            height: 3px;
-                            display: block;
-                            background-color: $bleu;
-                            transition: .5s ease-in-out;
-                        }
-                        .menu2{
-                            display: block;
-                            background-color: $bleu;
-                            height: 3px;
-                            width: 100%;
-                            transition: .5s ease-in-out;
-                        }
-                        .menu3{
-                            width:15px;
-                            height: 3px;
-                            display:block;
-                            background-color: $bleu;
-                            transition: .5s ease-in-out;
-                        }
-                    }
-
-                .navigation{
-                    position: absolute;
-                    right: 120em;
-                    z-index:1;
-                    height: 100vh;
-                    width: 100vw;
-                    background-color: $bleu;
-                    margin: 0;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                    align-items: flex-end;
-                    padding:0 1em 5em 0;
-                    transition: .5s ease-in-out;
-
-                    @include desktop{
-                        background: none;
-                        left: 0;
-                        height: 100px;
-                        width: 500px;
-                        flex-direction: row;
-                        justify-content: space-around;
-                        align-items: center;
-                        padding: 0;
-                    }
-                    li{
-                        list-style: none;
-                        margin: .5em 0;
-
-                        @include desktop{
-                            margin: 0;
-                            width: 100%;
-                            border-right: 1px solid $rose;
-                        }
-
-                        a{
-                            text-decoration: none;
-                            text-align: right;
-                            @include MontserratBold;
-                            font-size: 2rem;
-                            color: $bleu2;
-
-                            @include desktop{
-                                color: $rose;
-                                @include Montserrat;
-                                font-size: 1em;
-                                text-align: center;
-                                width: 120px;
-                                display: block;
-                            }
-                        }
-                    }
-                    li:last-of-type{
-                        padding-bottom: 2em;
-
-                        @include desktop{
-                            padding-bottom: 0;
-                            border:none;
-                        }
-                    }
-                }
-
-                .trigger{
-                    position:absolute;
-                    right: 120em;
-                    top: 55%;
-                    z-index: 1;
-                    transition: all .5s ease-in-out;
-                    color: $bleu2;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 1.6em;
-                    @include desktop{
-                        right: 0;
-                        top: 0;
-                        height: 100px;
-                        width: 40px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: $rose;
-                        font-size: 1.2em;
-                    }
-                }
-
-                .recherche{
-                    display: none;
-                    position: absolute;
-                    right: 120em;
-                    top: 55%;
-                    z-index:1;
-                    transition: all .5s ease-in-out;
-
-                    @include desktop{
-                        right: 0;
-                        height: 40px;
-                        width: 40px;
-                        display: none;
-
-                        label{
-                            width: 100%;
-                            height: 100%;
-                            display: block;
-
-                            &:after{
-                                content: "\f002";
-                                font-family: 'Font Awesome 5 Free';
-                                font-size: 1.6em;
-                                color: $rose;
-                                display: inline-block;
-                                font-style: normal;
-                                font-variant: normal;
-                                text-rendering: auto;
-                                font-weight: 700;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                height: 100%;
-                            }
-                        }
-                    }
-                }
-                .burger:checked ~.navigation{
-                    right:0px;
-                    position:fixed;
-                }
-                .burger:checked ~.recherche{
-                    display: none;
-                    position:fixed;
-                    height: 30px;
-                    width: 30px;
-                    top: 55%;
-                    right: 1em;
-                    /*label{
-                        width: 30px;
-                        height: 30px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        &:after{
-                            content: "\f002";
-                            font-family: 'Font Awesome 5 Free';
-                            font-size: 1.6em;
-                            color: $bleu2;
-                            display: inline-block;
-                            font-style: normal;
-                            font-variant: normal;
-                            text-rendering: auto;
-                            font-weight: 700;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                        }
-                    }*/
-                }
-                .burger:checked ~.trigger{
-                    position: fixed;
-                    height: 30px;
-                    width: 30px;
-                    top: 55%;
-                    right: 1em;
-                    color: $bleu2;
-                }
-                .rose{
-                    background-color: $rose;
-                }
-                .active{
-                    position:absolute;
-                    right: 120em;
-                    top: 55%;
-                    z-index: 1;
-                    transition: .5s ease-in-out;
-                }
-                .burger:checked ~.active{
-                    right: 1em;
-                    height: 40px;
-                    min-width: 80vw;
-                    display: flex;
-                    justify-content: flex-start;
-                    background-color: #fff;
-                
-                    button[type=submit]{
-                        height: 100%;
-                        width: 30px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background:none;
-                        border: none;
-                        color: $bleu2;
-                        font-size: 1.6em;
-                        //margin-left: auto;
-                        position: absolute;
-                        right: 0;
-                        padding: 0;
-                    }
-                
-                    input[type=search]{
-                        width: 100%;
-                        height: 100%;
-                        padding: 0;
-                        border: none;
-                        @include Montserrat;
-                        color: $bleu2;
-                        outline: none;
-
-                        &::-webkit-search-cancel-button{
-                            display:none;
-                        }
-                    }
-                
-                    .close{
-                        height: 100%;
-                        width: 30px;
-                        color: $bleu2;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                }
-            }
-        } 
+//le logo Kazan
+.toplogo{
+    margin: 0;
+    z-index: 5;
+    span{
+        display: none;
     }
-    .title{
-        margin-top: auto;
-        margin-bottom: 2em;
-
-        @include desktop{
-            width: 30vw;
-            margin: auto auto 4em auto;
-        }
-        h2{
-            color:$bleu;
-            width: 250px;
-            margin: 0;
-            margin-left: auto;
-            display: flex;
-            flex-direction: column;
-            @include MavenPro;
-            font-size: 2rem;
-
-            @include desktop{
-                width: 500px;
-                font-size: 5rem;
-                text-align: right;
-            }
-            span{
-                order: -1;
-                font-size: 4rem;
-                @include Montserrat;
-
-                @include desktop{
-                    order:0;
-                    font-size: 6rem;
-                    @include MontserratLight;
-                }
-            }
-        }
-        p{
-            display:none;
-
-            @include desktop{
-                display: block;
-                text-align: center;
-                color: $grisclair;
-                font-size: 1.3rem;
-                @include MavenPro;
-            }
-        }
-    }
-    .schedule{
-        color:#fff;
-        text-decoration: none;
-        text-align: center;
-        background-color:$bleu;
-        padding: 18px 8px;
+    a{
         width: 200px;
-        display: block;
-        margin: 0 auto;
-        border-radius:50px;
-        margin-bottom: 2em;
-        box-shadow: 0px 0px 15px -5px #333;
-        @include Montserrat;
-        text-transform: uppercase;
-
-        @include desktop{
-            position: absolute;
-            left: calc(50% - 113px);
-            bottom: -60px;
-            z-index: 999;
+        height: 136px;
+        display: inline-block;
+        margin: 1em 0 0 1.5em;
+        img{
+            margin:0;
+            padding:0;
+            width: 100%;
+            height: 100%;
         }
+    }
+}
+
+@import 'navigation';
+
+//22>27 August et le petit texte en dessous (plus dans la nav)
+.title{
+    margin-top: auto;
+    margin-bottom: 2em;
+    
+    @include desktop{
+        width: 30vw;
+        margin: auto auto 4em auto;
+    }
+    h2{
+        color:$bleu;
+        width: 250px;
+        margin: 0;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        @include MavenPro;
+        font-size: 2rem;
+        
+        @include desktop{
+            width: 500px;
+            font-size: 5rem;
+            text-align: right;
+        }
+        span{
+            order: -1;
+            font-size: 4rem;
+            @include Montserrat;
+            
+            @include desktop{
+                order:0;
+                font-size: 6rem;
+                @include MontserratLight;
+            }
+        }
+    }
+    p{
+        display:none;
+        
+        @include desktop{
+            display: block;
+            text-align: center;
+            color: $grisclair;
+            font-size: 1.3rem;
+            @include MavenPro;
+        }
+    }
+}
+
+//le bouton "see schedule"
+.schedule{
+    color:#fff;
+    text-decoration: none;
+    text-align: center;
+    background-color:$bleu;
+    padding: 18px 8px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius:50px;
+    margin-bottom: 2em;
+    box-shadow: 0px 0px 15px -5px #333;
+    @include Montserrat;
+    text-transform: uppercase;
+
+    @include desktop{
+        position: absolute;
+        left: calc(50% - 113px);
+        bottom: -60px;
+        z-index: 999;
     }
 }
 

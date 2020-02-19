@@ -1,4 +1,6 @@
-/*Import Montserrat*/
+/*----------Import Montserrat----------*/
+
+//Montserrat Regular
 @font-face{
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
@@ -9,7 +11,7 @@
     font-weight: 400;
 }
 
-
+//Montserrat Bold
 @font-face{
     font-family: 'MontserratBold';
     src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
@@ -20,7 +22,7 @@
     font-weight: 700;
 }
 
-
+//Montserrat Light
 @font-face{
     font-family: 'MontserratLight';
     src: url('../fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
@@ -31,6 +33,7 @@
     font-weight: 300;
 }
 
+//Montserrat Black
 @font-face{
     font-family: 'MontserratBlack';
     src: url('../fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
@@ -42,7 +45,9 @@
 }
 
 
-/*Import MavenPro*/
+/*----------Import MavenPro----------*/
+
+//Maven Pro Regular
 @font-face{
     font-family: 'MavenPro';
     src: url('../fonts/maven-pro/MavenPro-Regular.ttf') format('truetype');
@@ -53,7 +58,7 @@
     font-weight:400;
 }
 
-
+//Maven Pro Bold
 @font-face{
     font-family: 'MavenProBold';
     src: url('../fonts/maven-pro/MavenPro-Bold.ttf') format('truetype');
@@ -65,7 +70,9 @@
 }
 
 
-/*Import Museo*/
+/*----------Import Museo----------*/
+
+//Museo Regular
 @font-face{
     font-family: 'Museo';
     src: url('../fonts/museo/Museo500-Regular.otf') format('truetype');
@@ -76,7 +83,7 @@
     font-weight: 500;
 }
 
-
+//Museo Light
 @font-face{
     font-family: 'MuseoLight';
     src: url('../fonts/museo/Museo300-Regular.otf') format('truetype');
@@ -87,7 +94,7 @@
     font-weight: 300;
 }
 
-
+//Museo Bold
 @font-face{
     font-family: 'MuseoBold';
     src: url('../fonts/museo/Museo700-Regular.otf') format('truetype');

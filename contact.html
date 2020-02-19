@@ -4,86 +4,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="title" content="Kazan - The ultimate competition of WorldSkills" />
-  <meta name="description"
-    content="The ultimate competition dedicated for any manuals and technologicals skills, loves and works just for fun, for their work or just exchanging their passion with others…" />
-
+  <meta name="title" content="EI Nikola | Kazan - The ultimate competition of WorldSkills" />
+  <!--meta Open Graph-->
   <meta property="og:title" content="Guide touristique de la ville de Kazan" />
   <meta property="og:type" content="article" />
   <meta property="og:description" content="The ultimate competition dedicated for any manuals and technologicals skills, loves and works just for
-    fun, for their work or just exchanging their passion with others…" />
+  fun, for their work or just exchanging their passion with others…" />
   <meta property="og:image" content="\content\images\kazan-night.jpg" />
-  <link rel="icon" type="image/png" href="/content/images/icone.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+  <!--favicon-->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <!--feuilles de style-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
   <link rel="stylesheet" href="styles/style.css" />
+  <!--titre et description-->
   <title>Contact - KAZAN Smartcity</title>
+  <meta name="description"
+    content="The ultimate competition dedicated for any manuals and technologicals skills, loves and works just for fun, for their work or just exchanging their passion with others…" />
 </head>
 
 <body>
-<!--Le header-->
-<header>
-  <div class="top">
-      <nav>
-          <h1 class="toplogo">
-              <a href="index.html">
-                  <img src="img/logo_kazan.png" title="Bienvenue à Kazan Smartcity" alt="Kazan">
-                  <span>Kazan Smartcity</span>
-              </a>
-          </h1>
-          <div class="navbar"> 
-              <input type="checkbox" class="burger">
-              <span class="burgermenu">
-                  <span class="menu1"> </span>
-                  <span class="menu2"> </span>
-                  <span class="menu3"> </span>
-              </span>
-              <ul class="navigation">
-                  <li><a href="#">Visits</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">History</a></li>
-                  <li><a href="#">GetTickets</a></li>
-              </ul>
-              <div class="trigger fas fa-search"></div> <!--Le trigger va faire apparaitre le formulaire-->
-              <form action="#" class="recherche">
-                  <div class="close fas fa-times"></div>
-                  <input type="search" placeholder="Entrez votre recherche" id="searchbar" name="search">
-                  <button type="submit"><i class="fas fa-search"></i></button>
-              </form>
-          </div>
-      </nav>
-  </div>
-  <div class="title">
-      <h2>August <span>22 > 27</span></h2>
-      <p>The ultimate competition dedicated for any manuals and technologicals skills, loves and works just for fun, for their work or just exchanging their passion with others…</p>
-  </div>
-  <a href="#" class="schedule">See schedule</a>
-</header>
-<!--Fin header-->
-  <main class="main-contact"></main> <!--Y a rien dedans wtf ?-->
-  <footer class="footer-contact">
+  <!--Le header-->
+  <header>
 
+    <nav> <!--La partie supérieure du header (logo + nav)-->
+        <h1 class="toplogo"> <!--Le logo-->
+            <a href="index.html">
+                <img src="img/logo_kazan.png" title="Bienvenue à Kazan Smartcity" alt="Kazan">
+                <span>Kazan Smartcity</span>
+            </a>
+        </h1>
+        <div class="navbar"> <!--La navigation-->
+            <input type="checkbox" class="burger"> <!--De quoi faire apparaitre/disparaitre le menu burger-->
+            <span class="burgermenu"> <!--Le picto burger-->
+                <span class="menu1"> </span>
+                <span class="menu2"> </span>
+                <span class="menu3"> </span>
+            </span>
+            <ul class="navigation"> <!--La navigation-->
+                <li><a href="#">Visits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">GetTickets</a></li>
+            </ul>
+            <div class="trigger fas fa-search"></div> <!--Le trigger qui fait apparaitre la barre de recherche-->
+            <form action="#" class="recherche"> <!--La barre de recherche-->
+                <div class="close fas fa-times"></div>
+                <input type="search" placeholder="Entrez votre recherche" id="searchbar" name="search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </nav> <!--Fin de la partie supérieure du header-->
+    
+    <div class="title"> <!--la date + petit texte d'intro-->
+        <h2>August <span>22 > 27</span></h2>
+        <p>The ultimate competition dedicated for any manuals and technologicals skills, loves and works just for fun, for their work or just exchanging their passion with others…</p>
+    </div>
+
+    <a href="#" class="schedule">See schedule</a> <!--Le bouton CTA-->
+  </header>
+  <!--Fin header-->
+
+  <footer class="contact-form">
 
     <form action="/action_page.php" class="form">
-      <h2 class="h2-conctact">Contact</h2>
 
+      <h2 class="h2-conctact">Contact</h2>
       <p class="p-conctact">Besoin d'un contact ?</p>
+
       <fieldset class="form-fieldset">
+
         <label for="fname" class="label-contact">Prénom</label>
         <input data-id="0" type="text" id="fname" name="fname" value="" class="input-contact" required>
+
         <label for="lname" class="label-contact">Nom</label>
         <input data-id="1" type="text" id="lname" name="lname" value="" class="input-contact" required>
+
         <label for="fname" class="label-contact">Email</label><br>
         <input data-id="2" type="mail" id="email" name="fname" value="" class="input-contact" required>
+
         <label for="fname" class="label-contact">Objet</label><br>
         <input data-id="3" type="text" id="objet" name="fname" value="" class="input-contact" required>
-        <label for="fname" class="label-contact label-min">Message</label><br>
+
+        <label for="fname" class="label-contact label-min">Message</label><br> <!--C'est quoi ça ? Un /br ? Bastien tu nous fais quoi là ? Wallah jsuis vraiment déçu de toi-->
         <textarea id="textarea-contact" rows="8" cols="50" required></textarea>
+
         <input type="submit" value="Enjoy" class="submit-btn">
+
       </fieldset>
+
     </form>
+
   </footer>
-  <script type="text/javascript" src="script.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+  <!--Alors le formulaire de contact est dans un footer, sémantiquement c'est peut-être nul, mais ça permet de récupérer le style du footer de la page d'index, et pour l'instant inch'allah ça me suffit-->
+
+
+  <script type="text/javascript" src="script.js"></script> <!--Mon js pour le header et le main (ici on utilise pas le main)-->
+
+  <script type="text/javascript" src="main.js"></script> <!--Et ça c'est le js de Bastou pour le formulaire de contact-->
 </body>
 
 </html>

@@ -1,9 +1,21 @@
 /*fichier global avec tous les imports*/
-@import "scss_fa/fontawesome.scss";
-@import "scss_fa/solid.scss";
-@import "scss_fa/brands.scss";
-@import "scss_fa/regular.scss";
-@import "variables";
+@import "mediaquery";
 @import "fonts";
 @import "couleurs";
-@import "mobile";
+
+
+/*-----Mobile First------*/
+/*Pour les media queries, il faut rajouter à la fin des déclarations mobile first "@include desktop{déclarations desktop}"*/
+body{
+    margin:0;
+    padding:0;
+}
+
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'form';
+
+.hidden{
+    display: none;
+}

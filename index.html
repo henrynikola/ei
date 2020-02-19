@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css" type="text/css">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!--meta Open Graph-->
     <meta property="og:title" content="Guide touristique de la ville de Kazan" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="The ultimate competition dedicated for any manuals and technologicals skills, loves and works just for
     fun, for their work or just exchanging their passion with others…" />
     <meta property="og:image" content="\content\images\kazan-night.jpg" />
+    <!--feuilles de style-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <!--favicon-->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!--titre et description-->
     <title>EI-Nikola | Kazan - The ultimate competition of WorldSkills</title>
     <meta name="description" content="The ultimate competition dedicated for any manuals and technologicals skills, loves and works just for fun, for their work or just exchanging their passion with others...">
 </head>
+
 <body>
     <!--Le header-->
     <header>
-        <div class="top">
-            <nav>
-                <h1 class="toplogo">
-                    <a href="#">
-                        <img src="img/logo_kazan.png" title="Bienvenue à Kazan Smartcity" alt="Kazan">
-                        <span>Kazan Smartcity</span>
-                    </a>
-                </h1>
-                <div class="navbar"> 
-                    <input type="checkbox" class="burger">
-                    <span class="burgermenu">
-                        <span class="menu1"> </span>
-                        <span class="menu2"> </span>
-                        <span class="menu3"> </span>
-                    </span>
-                    <ul class="navigation">
-                        <li><a href="#">Visits</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">GetTickets</a></li>
-                    </ul>
-                    <div class="trigger fas fa-search"></div> <!--Le trigger va faire apparaitre le formulaire-->
-                    <form action="#" class="recherche">
-                        <div class="close fas fa-times"></div>
-                        <input type="search" placeholder="Entrez votre recherche" id="searchbar" name="search">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>
-            </nav>
-        </div>
-        <div class="title">
+
+        <nav> <!--La partie supérieure du header (logo + nav)-->
+            <h1 class="toplogo"> <!--Le logo-->
+                <a href="#">
+                    <img src="img/logo_kazan.png" title="Bienvenue à Kazan Smartcity" alt="Kazan">
+                    <span>Kazan Smartcity</span>
+                </a>
+            </h1>
+            <div class="navbar"> <!--La navigation-->
+                <input type="checkbox" class="burger"> <!--De quoi faire apparaitre/disparaitre le menu burger-->
+                <span class="burgermenu"> <!--Le picto burger-->
+                    <span class="menu1"> </span>
+                    <span class="menu2"> </span>
+                    <span class="menu3"> </span>
+                </span>
+                <ul class="navigation"> <!--La navigation-->
+                    <li><a href="#">Visits</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">GetTickets</a></li>
+                </ul>
+                <div class="trigger fas fa-search"></div> <!--Le trigger qui fait apparaitre la barre de recherche-->
+                <form action="#" class="recherche"> <!--La barre de recherche-->
+                    <div class="close fas fa-times"></div>
+                    <input type="search" placeholder="Entrez votre recherche" id="searchbar" name="search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </nav> <!--Fin de la partie supérieure du header-->
+        
+        <div class="title"> <!--la date + petit texte d'intro-->
             <h2>August <span>22 > 27</span></h2>
             <p>The ultimate competition dedicated for any manuals and technologicals skills, loves and works just for fun, for their work or just exchanging their passion with others…</p>
         </div>
-        <a href="#" class="schedule">See schedule</a>
+
+        <a href="#" class="schedule">See schedule</a> <!--Le bouton CTA-->
     </header>
     <!--Fin header-->
 
     <!--Début main content-->
     <main>
-        <section class="content">
+        <section class="content"> <!--Le contenu principal de la page-->
             <h2>Que faire à Kazan ?</h2>
-            <ul class="activites">
-                <li class="act">
-                    <figure>
+
+            <ul class="activites"> <!--La liste des activités-->
+
+                <li class="act"> <!--Une activité (x12)-->
+                    <figure> 
                         <img src="img/activite/Kazan_Kremlin.jpg" alt="Kremlin de Kazan">
-                        <figcaption class="card">
+                        <figcaption class="card"> <!--Les infos sur l'activité-->
                             <h3 class="lieu">Kremlin <span>de Kazan</span></h3>
                             <p class="city">Center of the city</p>
                             <h4 class="centerCity">Kremlin historique du Tatarstan</h4>
@@ -317,8 +327,11 @@
                 </li>
 
             </ul>
+            <!--Fin de la liste des activités-->
+
         </section>
-        <div class="getticket">
+
+        <div class="getticket"> <!--Le bouton Get Ticket-->
             <a href="#">Get ticket</a>
             <div class="payinfos">
                 <img src="img/card.svg" alt="Carte de crédit">
@@ -331,8 +344,8 @@
 
     <!--Début footer-->
     <footer>
-        <section class="infos">
-            <div class="tourism">
+        <section class="infos"> <!--Partie supérieure du footer-->
+            <div class="tourism"> <!--Petit paragraphe d'infos sur Kazan-->
                 <div>
                     <h3>TatarStan Tourism</h3>
                     <img src="img/pin.svg" alt="location">
@@ -342,8 +355,8 @@
             </div>
             <img src="img/kazan-night.jpg" alt="Kazan pendant la nuit">
         </section>
-        <section class="bottom">
-            <div class="follow">
+        <section class="bottom"> <!--Partie inférieure du footer-->
+            <div class="follow"> <!--Réseaux sociaux-->
                 <h3>Follow US</h3>
                 <div>
                     <a href="#"><img src="img/slack.svg" alt="rejoindre le Slack"></a>
@@ -354,7 +367,7 @@
                     <p>@kazan2019</p>
                 </div>
             </div>
-            <div class="visit">
+            <div class="visit"> <!--Visitez le Tatarstan (je pensais jamais dire ça un jour)-->
                 <h4>Visit Tatarstan</h4>
                 <p>+7 843-206-00-14</p>
                 <span>(speaker's support)</span>
@@ -365,4 +378,5 @@
     <!--Fin footer-->
     <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
