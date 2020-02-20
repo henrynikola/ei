@@ -1515,12 +1515,18 @@ footer section {
   height: 100vh;
   padding-bottom: 4em;
   background: url("../img/brent-cox-mid.jpg");
-  background-color: rgba(40, 78, 104, 0.5);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(40, 78, 104, 0.7);
           box-shadow: inset 0 0 0 10000px rgba(40, 78, 104, 0.7);
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-form {
+    height: 100vh;
+    padding: 4em 0;
+  }
 }
 
 .form {
@@ -1544,12 +1550,26 @@ footer section {
   font-weight: 400;
 }
 
+@media screen and (min-width: 768px) {
+  .form {
+    height: 90vh;
+  }
+}
+
 .form h2,
-.form h3,
 .form p {
   color: white;
   margin: 1vw;
   padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .form h2,
+  .form p {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 1vw 0;
+  }
 }
 
 .form h2 {
@@ -1586,6 +1606,13 @@ footer section {
   color: #00d8ff;
 }
 
+@media screen and (min-width: 768px) {
+  .form-fieldset label {
+    width: 100%;
+    margin-top: 2em;
+  }
+}
+
 .form-fieldset input {
   width: 100%;
   outline: none;
@@ -1610,12 +1637,25 @@ footer section {
   color: #2d3a42;
 }
 
+@media screen and (min-width: 768px) {
+  .form-fieldset .submit-btn {
+    padding: 2em 0;
+  }
+}
+
 .label-min {
   font-size: 0.8rem;
   -webkit-transform: translateY(-2vw);
           transform: translateY(-2vw);
   -webkit-transition: .2s ease;
   transition: .2s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .label-min {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .label-contact {

@@ -22,14 +22,26 @@ myClick.forEach(element => {
     element.addEventListener("click", ev=> {
         //console.log(ev.target)
         let myAct = ev.target.closest(".act")
-        //console.log(myAct)
+        let myCard = myAct.querySelector('.card')
+        let myCity = myCard.querySelector('.city')
+        let couleur = myCard.querySelector('h4')
+        console.log(couleur)
 
         if(myAct.classList.contains('reveal')) {
             myAct.classList.remove('reveal')
+            if (couleur.classList.contains('centerCity')){
+                myCity.classList.remove('centerCity')
+            } else if (couleur.classList.contains('outCity')){
+                myCity.classList.remove('outCity')
+            }
 
         }else{
             myAct.classList.add('reveal')
-            
+            if (couleur.classList.contains('centerCity')){
+                myCity.classList.add('centerCity')
+            } else if (couleur.classList.contains('outCity')){
+                myCity.classList.add('outCity')
+            }
         }
 
     })

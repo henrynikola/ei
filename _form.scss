@@ -3,11 +3,15 @@
   height: 100vh;
   padding-bottom: 4em;
   background: url('../img/brent-cox-mid.jpg');
-  background-color: rgba(40, 78, 104, .5);
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: inset 0 0 0 10000px rgba(40,78,104,.7);
   display: block;
+
+  @include desktop{
+    height: 100vh;
+    padding: 4em 0;
+  }
 }
 
 .form {
@@ -19,12 +23,21 @@
   height: 100vh;
   margin: 0 auto;
   @include Montserrat;
+
+  @include desktop{
+    height: 90vh;
+  }
+
   h2,
-  h3,
   p {
     color: white;
     margin: 1vw;
     padding: 0;
+
+    @include desktop{
+      align-self: flex-start;
+      margin: 1vw 0;
+    }
   }
   h2 {
     text-transform: uppercase;
@@ -48,6 +61,11 @@
       content: " *";
       color: $bleu;
     }
+
+    @include desktop{
+      width: 100%;
+      margin-top: 2em;
+    }
   }
   
   input {
@@ -70,6 +88,10 @@
       background-color: white;
       color: $appearblockcolor;
     }
+
+    @include desktop{
+      padding: 2em 0;
+    }
   }
 }
 
@@ -77,6 +99,10 @@
   font-size: 0.8rem;
   transform: translateY(-2vw);
   transition: .2s ease;
+
+  @include desktop{
+    transform: translateY(0);
+  }
 }
 
 .label-contact{
