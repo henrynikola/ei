@@ -14,7 +14,29 @@ Ensuite, sur les éléments qui possèdent la classe .reveal, ajouter un écoute
 
 */
 
-document.addEventListener("click", ev => { //écouteur d'événement click
+let myClick = document.querySelectorAll(".act")
+
+console.log(myClick)
+
+myClick.forEach(element => {
+    element.addEventListener("click", ev=> {
+        //console.log(ev.target)
+        let myAct = ev.target.closest(".act")
+        //console.log(myAct)
+
+        if(myAct.classList.contains('reveal')) {
+            myAct.classList.remove('reveal')
+
+        }else{
+            myAct.classList.add('reveal')
+            
+        }
+
+    })
+});
+
+
+/*document.addEventListener("click", ev => { //écouteur d'événement click
     if (ev.target.classList.contains("card") || ev.target.classList.contains("city") || ev.target.classList.contains("lieu")) { //capter le click sur ces éléments
         let reveler = ev.target.closest(".act"); //en fait j'agis sur ma classe .act (qui est ma li)
         reveler.classList.toggle("reveal"); //je toggle la classe reveal
@@ -34,7 +56,7 @@ document.addEventListener("click", ev => { //écouteur d'événement click
             couleur.classList.remove("outCity") //je retire la couleur
         }
     };
-});
+});*/
 
 /*
 Bon, visiblement, ça fonctionne avec un EventListenner de type click, même sur mobile (ça nécéssiterait peut-être un test sur un vrai mobile pour être sûr)
@@ -68,32 +90,6 @@ myHover.forEach(element => {
         mySurvol.classList.remove('reveal')
     })
 });
-
-
-//console.log(myHover)
-/*document.addEventListener("mouseover", ev => {
-    //console.log(ev.target.parentNode) //ça survole les balises Figure
-    let hover = ev.target.parentNode
-    let survol = hover.parentNode
-    let monHover = ev.target.closest(".act")
-
-    console.log(ev.target)
-    console.log(monHover)
-
-
-    if(survol.classList.contains("act") || ev.target.classList.contains("lieu") || ev.target.classList.contains("city")){
-        //console.log(survol)
-        survol.classList.add("reveal")
-        monHover.classList.add("reveal")
-    };
-});*/
-
-
-
-
-
-
-
 
 
 // ---------- barre de recherche dans le header

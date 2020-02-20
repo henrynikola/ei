@@ -64,7 +64,7 @@
   </header>
   <!--Fin header-->
 
-  <footer class="contact-form">
+  <main class="contact-form">
 
     <form action="/action_page.php" class="form">
 
@@ -79,13 +79,13 @@
         <label for="lname" class="label-contact">Nom</label>
         <input data-id="1" type="text" id="lname" name="lname" value="" class="input-contact" required>
 
-        <label for="email" class="label-contact">Email</label><br>
-        <input data-id="2" type="mail" id="email" name="email" value="" class="input-contact" required>
+        <label for="email" class="label-contact">Email</label>
+        <input data-id="2" type="email" id="email" name="email" value="" class="input-contact" required>
 
-        <label for="object" class="label-contact">Objet</label><br>
-        <input data-id="3" type="text" id="objet" name="object" value="" class="input-contact" required>
+        <label for="objet" class="label-contact">Objet</label>
+        <input data-id="3" type="text" id="objet" name="objet" value="" class="input-contact" required>
 
-        <label for="message" class="label-contact label-min message">Message</label>
+        <label for="textarea-contact" class="label-contact label-min message">Message</label>
         <textarea id="textarea-contact" name="message" rows="8" cols="50" required></textarea>
 
         <input type="submit" value="Enjoy" class="submit-btn">
@@ -94,13 +94,13 @@
 
     </form>
 
-  </footer>
+  </main>
   <!--Alors le formulaire de contact est dans un footer, sémantiquement c'est peut-être nul, mais ça permet de récupérer le style du footer de la page d'index, et pour l'instant inch'allah ça me suffit-->
 
 
-  <script type="text/javascript" src="script.js"></script> <!--Mon js pour le header et le main (ici on utilise pas le main)-->
+  <script src="script.js"></script> <!--Mon js pour le header et le main (ici on utilise pas le main)-->
 
-  <script type="text/javascript" src="main.js"></script> <!--Et ça c'est le js de Bastou pour le formulaire de contact-->
+  <script src="main.js"></script> <!--Et ça c'est le js de Bastou pour le formulaire de contact-->
 </body>
 
 </html>

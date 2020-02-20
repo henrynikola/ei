@@ -11,12 +11,12 @@ contactInput.forEach(element => {
     }
   });
 
-  element.addEventListener("mouseenter", function() {
+  element.addEventListener("onfocus", function() {
     let id = element.dataset.id;
     console.log(id);
     minLabel[id].classList.toggle("label-min");
   });
-  element.addEventListener("mouseout", function() {
+  element.addEventListener("blur", function() {
     let id = element.dataset.id;
     console.log(id);
     minLabel[id].classList.toggle("label-min");
