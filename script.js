@@ -49,7 +49,29 @@ Une fois que l'activité est révélée, détecter s'il y a une classe ".centerC
 
 let myHover = document.querySelectorAll(".act")
 
-document.addEventListener("mouseover", ev => {
+myHover.forEach(element => {
+    element.addEventListener("mouseover", ev =>{
+        let hover = ev.target.parentNode
+        let survol = hover.parentNode
+
+        let mySurvol = ev.target.closest(".act")
+
+        mySurvol.classList.add('reveal')
+    })
+
+    element.addEventListener("mouseout", ev => {
+        let hover = ev.target.parentNode
+        let survol = hover.parentNode
+
+        let mySurvol = ev.target.closest(".act")
+
+        mySurvol.classList.remove('reveal')
+    })
+});
+
+
+//console.log(myHover)
+/*document.addEventListener("mouseover", ev => {
     //console.log(ev.target.parentNode) //ça survole les balises Figure
     let hover = ev.target.parentNode
     let survol = hover.parentNode
@@ -64,21 +86,17 @@ document.addEventListener("mouseover", ev => {
         survol.classList.add("reveal")
         monHover.classList.add("reveal")
     };
-});
+});*/
 
-console.log(myHover)
-myHover.forEach(element => {
 
-    element.addEventListener("mouseout", ev => {
-        let hover = ev.target.parentNode
-        let survol = hover.parentNode
 
-        if(survol.classList.contains("reveal")){
-            survol.classList.remove("reveal")
-        }
-    })
-});
 
+
+
+
+
+
+// ---------- barre de recherche dans le header
 
 let myTrigger = document.querySelector(".trigger")
 let mySearch = document.querySelector(".recherche")
@@ -86,7 +104,7 @@ let myNav = document.querySelector(".navigation")
 let li = myNav.children
 
 myTrigger.addEventListener("click", ev=> {
-    console.log('coucou')
+    //console.log('coucou')
     myTrigger.classList.add('hidden')
     mySearch.classList.add('active')
     myNav.classList.add('rose')
